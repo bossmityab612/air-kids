@@ -1,0 +1,387 @@
+/* @import url('../vendor/normalize.css'); НОРМАЛАЙЗ */
+@import url('../vendor/nullstyle.css'); /* ОБНУЛЕНИЕ */
+@import url('../vendor/bicubik.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    /* outline: 1px solid green; */
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+:root {
+    /* --inter: 'Inter', Arial, Helvetica, sans-serif; */
+    --bicubik: 'Bicubik', Arial, Helvetica, sans-serif;
+    --montserrat: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+html,
+body {
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+ul li,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+body {
+    width: 100%;
+    max-width: 1903px;
+    margin: 0 auto;
+    font-family: var(--montserrat);
+    position: relative;
+    background-color: #F2F2F2;
+}   
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* .montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+} */
+
+
+/* ------ Шапка сайта ------- */
+.header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header__block-logo-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__block {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    border: 1px solid #000;
+}
+
+.header__block-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__logo {
+    object-fit: contain;
+    margin-right: 60px;
+}
+
+.header__navigation-list {
+    margin: 0;
+    padding: 0 31px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.header__navigation-list-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 49px;
+    max-width: 863px;
+    width: 100%;
+    border-radius: 21px;
+    background-color: #F4F4F4;
+}
+
+.header__navigation-list-item {
+    font-size: 18px;
+    line-height: 21.78px;
+    flex-shrink: 1;
+}
+
+.header__navigation-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.header__buttons-block {
+    font-family: var(--montserrat);
+    max-width: 296px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ------ Блок ИНТРО --------- */
+.intro__image {
+    background-image: url('../images/intro-image.png');
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 1904px;
+    min-height: 520px;
+}
+
+/* ---- Блок МАТЧИ расписание ----- */
+.matches {
+    border: 1px solid red;
+}
+
+.matches__cards-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.matches__card-item {
+    border: 1px solid #000;
+    max-width: 261px;
+    width: 100%;
+    min-height: 192px;
+}
+
+/* ---- Блок РЕГИСТРАЦИЯ ----- */
+
+.registration {
+    border: 1px solid #000;
+    background-image: url('../images/reg-image.png');
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 142px;
+}
+
+/* ----- Блок НОВОСТИ ----- */
+
+.news {
+    margin: 10px auto 88px;
+}
+
+.news__cards-block {
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row;
+}
+
+.news__cards-item {
+    border: 1px solid #000;
+    max-width: 360px;
+    width: 100%;
+    min-height: 414px;
+}
+
+/* ----- Блок с ТАБЛИЦЕЙ ----- */
+.table-image {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 566px;
+}
+
+/* ----- Блок СЕРЫЙ БЛОК-1 ----- */
+
+.grey-block-1 {
+    margin: 40px auto;
+    width: 100%;
+    min-height: 143px;
+    background-color: #909090;
+}
+
+/* ----- Блок РАСПИСАНИЕ ----- */
+
+.schedule__seasons {
+    margin: 30px auto 37px;
+    display: flex;
+    flex-direction: row;
+    gap: 23px;
+}
+
+.schedule__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.schedule__play-off-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 43px;
+    border: 1px solid #000;
+    width: 100%;
+    min-height: 444px;
+}
+
+.schedule__play-off-item {
+    border: 1px solid red;
+    max-width: 237px;
+    width: 100%;
+}
+
+.schedule__third-place {
+    margin: 0 0 30px 0;
+    max-width: 252px;
+    min-height: 105px;
+    background-color: #727272;
+    display: flex;
+}
+
+/* ---- ТАБЛИЦА МАТЧЕЙ ---- */
+
+.schedule_schedule-table {
+    margin: 30px 0;
+    max-width: 1106px;
+    width: 100%;
+    min-height: 407px;
+    border: none;
+    border-spacing: 0;
+}
+
+.schedule_schedule-table td tr {
+    text-align: center;
+}
+
+.schedule_schedule-table td {
+    min-width: 96px;
+    max-width: 283px;
+    text-align: center;
+}
+
+.schedule_schedule-table tr:first-child {
+    background-color: #6D1AD7;
+}
+
+/* ----- Блок СЕРЫЙ БЛОК-2 ----- */
+
+.grey-block-2 {
+    margin: 40px auto;
+    width: 100%;
+    min-height: 424px;
+    background-color: #909090;
+}
+
+/*-----------------------------*/
+
+footer {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    background-image: url('../images/footer-bg-image.png');
+    background-repeat: no-repeat;
+    object-fit: contain;
+    min-height: 275px;
+}
+
+.footer__block {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__block a {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+
