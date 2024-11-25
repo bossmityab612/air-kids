@@ -123,6 +123,7 @@ body {
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
+    border: 1px solid #000;
 }
 
 .header__block-logo-nav {
@@ -139,7 +140,6 @@ body {
     justify-content: space-between;
     height: 100%;
     align-items: center;
-    border: 1px solid #000;
 }
 
 .header__block-logo {
@@ -210,7 +210,7 @@ body {
 
 /* ---- Блок МАТЧИ расписание ----- */
 .matches {
-    border: 1px solid red;
+    border: none;
 }
 
 .matches__cards-block {
@@ -222,16 +222,56 @@ body {
 }
 
 .matches__card-item {
-    border: 1px solid #000;
+    border-radius: 3px;
     max-width: 261px;
     width: 100%;
     min-height: 192px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: linear-gradient(1px, #DDDDDD);
+}
+
+.matches__card-item-title {
+    background-color: #C7C7C7;
+    min-height: 35px;
+    text-align: center;
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.matches__card-item-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.matches__card-item-footer {
+    background-color: #C7C7C7;
+    border-radius: 0 0 3px 3px;
+    min-height: 35px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.matches__card-item-footer svg {
+    margin-right: 17px;
+}
+
+.matches__card-item-footer svg:last-child {
+    margin-right: 0;
 }
 
 /* ---- Блок РЕГИСТРАЦИЯ ----- */
 
 .registration {
-    border: 1px solid #000;
     background-image: url('../images/reg-image.png');
     object-fit: contain;
     background-repeat: no-repeat;
@@ -248,7 +288,6 @@ body {
 }
 
 .news__cards-block {
-    border: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,11 +296,42 @@ body {
 }
 
 .news__cards-item {
-    border: 1px solid #000;
+    border-radius: 30px;
     max-width: 360px;
     width: 100%;
     min-height: 414px;
 }
+
+.news__cards-item:hover {
+    background-color: #6D1AD7;
+    color: #fff;
+}
+
+.news__cards-item img {
+    border-radius: 30px 30px 0 0;
+}
+
+.news__cards-item p {
+    text-align: right;
+    margin: 7px 6px 0 0;
+}
+
+.news-cards-text {
+    padding: 6px;
+}
+
+.news-cards-text h2 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.news-cards-text h3 {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+}
+
 
 /* ----- Блок с ТАБЛИЦЕЙ ----- */
 .table-image {
@@ -309,6 +379,28 @@ body {
     border: 1px solid red;
     max-width: 237px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule__play-off-item table {
+    min-height: 50px;
+    max-width: 237px;
+    width: 100%;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+}
+
+.schedule__play-off-item table tr {
+    display: flex;
+    flex-direction: row;
+}
+
+.schedule__play-off-item table td {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .schedule__third-place {
