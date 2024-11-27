@@ -1,0 +1,44 @@
+.comands {
+    background-color: #fff;
+}
+
+.comands h2 {
+    margin: 20px auto 53px;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #DDDDDD;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.comands__logos {
+    margin: 0 auto;
+    max-width: 950px;
+    min-height: 450px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.comands__logos-card {
+    padding: 18px;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.comands__logos-card:hover {
+    background-color: #EBE9E9;
+}
+
+.comands__logos-card-title {
+    text-align: center;
+}

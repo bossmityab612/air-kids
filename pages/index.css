@@ -1,8 +1,9 @@
-/* @import url('../vendor/normalize.css'); НОРМАЛАЙЗ */
 @import url('../vendor/nullstyle.css'); /* ОБНУЛЕНИЕ */
 @import url('../vendor/bicubik.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('./index-news.css');
+@import url('./index-calendar.css');
+@import url('./index-comands.css');
 
 *{
     /* outline: 1px solid green; */
@@ -136,6 +137,10 @@ body {
     background-color: #6D1AD7;
 }
 
+.header__block a {
+    text-decoration: none;
+}
+
 .header__navigation-list {
     margin: 0;
     padding: 0;
@@ -253,10 +258,10 @@ body {
 
 .news__cards-block {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 30px;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .news__cards-item {
@@ -287,13 +292,13 @@ body {
     padding: 6px;
 }
 
-.news-cards-text h2 {
+.news-cards-text h3 {
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
 }
 
-.news-cards-text h3 {
+.news-cards-text h4 {
     font-weight: 300;
     font-size: 15px;
     line-height: 18px;
@@ -490,7 +495,6 @@ body {
 
 .schedule_schedule-table-A tr {
     display: flex;
-    border: 1px solid #000;
     min-height: 57px;
     align-items: center;
     flex-direction: row;
@@ -513,7 +517,7 @@ body {
 /* ----- Блок СЕРЫЙ БЛОК-2 ----- */
 
 .grey-block-2 {
-    margin: 40px auto;
+    margin: 40px auto 0;
     width: 100%;
     min-height: 424px;
     background-color: #909090;
