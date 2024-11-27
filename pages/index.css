@@ -126,69 +126,33 @@ body {
     border: 1px solid #000;
 }
 
-.header__block-logo-nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .header__block {
     display: flex;
     gap: 20px;
     width: 100%;
-    justify-content: space-between;
     height: 100%;
-    align-items: center;
-}
-
-.header__block-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-}
-
-.header__logo {
-    object-fit: contain;
-    margin-right: 60px;
+    align-items: center;
+    background-color: #6D1AD7;
 }
 
 .header__navigation-list {
     margin: 0;
-    padding: 0 31px;
+    padding: 0;
     display: flex;
-    align-items: center;
-    list-style: none;
     width: 100%;
     gap: 30px;
     justify-content: space-between;
-}
-
-.header__navigation-list-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 49px;
-    max-width: 863px;
-    width: 100%;
-    border-radius: 21px;
-    background-color: #F4F4F4;
-}
-
-.header__navigation-list-item {
-    font-size: 18px;
-    line-height: 21.78px;
-    flex-shrink: 1;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .header__navigation-link {
-    color: #000;
     text-decoration: none;
 }
 
 .header__buttons-block {
-    font-family: var(--montserrat);
     max-width: 296px;
     width: 100%;
     display: flex;
@@ -300,6 +264,8 @@ body {
     max-width: 360px;
     width: 100%;
     min-height: 414px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
 }
 
 .news__cards-item:hover {
@@ -309,6 +275,7 @@ body {
 
 .news__cards-item img {
     border-radius: 30px 30px 0 0;
+    width: 100%;
 }
 
 .news__cards-item p {
@@ -370,45 +337,113 @@ body {
     flex-direction: row;
     justify-content: space-between;
     gap: 43px;
-    border: 1px solid #000;
     width: 100%;
     min-height: 444px;
 }
 
 .schedule__play-off-item {
-    border: 1px solid red;
     max-width: 237px;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
+.schedule__play-off-item h2 {
+    width: 100%;
+    min-height: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #FFAD32;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #E1E1E1;
+}
+
 .schedule__play-off-item table {
     min-height: 50px;
     max-width: 237px;
     width: 100%;
-    border: 1px solid #000;
     display: flex;
     flex-direction: row;
 }
 
-.schedule__play-off-item table tr {
+.schedule__play-off-table-block {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto 0;
+    min-height: 327px;
+    align-items: flex-end;
 }
 
-.schedule__play-off-item table td {
+.schedule__play-off-table-block table, tr{
+    border: 1px solid rgb(0, 0, 0);
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.schedule__play-off-table-block table caption{
+    margin: 0 0 5px 0;
+    line-height: 22px;
+    font-size: 10px;
+    display: flex;
     align-items: center;
 }
 
+.schedule__play-off-table-block svg{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.schedule__play-off-table-block p {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.schedule__play-off-item table td {
+    padding: 0 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .schedule__third-place {
-    margin: 0 0 30px 0;
     max-width: 252px;
     min-height: 105px;
-    background-color: #727272;
     display: flex;
+    width: 100%;
+}
+
+.schedule__third-place td {
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule__third-place p {
+    height: 26px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    background-color: #E1E1E1;
+    text-transform: uppercase;
+}
+
+.schedule__third-place caption {
+    font-size: 10px;
+    color: #A4A4A4;
 }
 
 /* ---- ТАБЛИЦА МАТЧЕЙ ---- */
@@ -430,11 +465,50 @@ body {
     min-width: 96px;
     max-width: 283px;
     text-align: center;
+    border: 1px solid #000;
 }
 
 .schedule_schedule-table tr:first-child {
     background-color: #6D1AD7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.schedule_schedule-table tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid #000;
+}
+
+.schedule_schedule-table-A {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.schedule_schedule-table-A tr {
+    display: flex;
+    border: 1px solid #000;
+    min-height: 57px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.schedule_schedule-table-A td {
+    /* min-width: 50px;
+    max-width: 284px; */
+    width: 100%;
+}
+
+/* ------- Блок ГАЛЕРЕЯ ------ */
+
+.photo-galery {
+    display: block;
+}
+
+
 
 /* ----- Блок СЕРЫЙ БЛОК-2 ----- */
 
@@ -476,4 +550,13 @@ footer {
     margin-left: 30px;
 }
 
-
+/* ----- Медиа-запросы ---- */
+@media screen and (max-width: 1903px) {
+    .photo-galery {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        width: 100%;
+        align-items: stretch;
+    }   
+}
