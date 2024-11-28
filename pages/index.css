@@ -4,6 +4,8 @@
 @import url('./index-news.css');
 @import url('./index-calendar.css');
 @import url('./index-comands.css');
+@import url('./index-players.css');
+@import url('./index-statistics.css');
 
 *{
     /* outline: 1px solid green; */
@@ -124,7 +126,6 @@ body {
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
-    border: 1px solid #000;
 }
 
 .header__block {
