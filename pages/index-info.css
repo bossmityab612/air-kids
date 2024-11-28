@@ -1,8 +1,4 @@
-.statistics {
-    border: 1px solid #8b8b8b;
-}
-
-.statistics h2 {
+.info h2 {
     margin: 20px auto 53px;
     padding: 10px;
     font-size: 20px;
@@ -13,35 +9,14 @@
     width: 100%;
 }
 
-.statistics select {
-    margin: 16px auto 16px 97px;
-    background-color: #6D1AD7;
-    border-radius: 8px;
-    max-width: 199px;
-    width: 100%;
-    min-height: 40px;
-    color: #fff;
-    padding: 16px;
-    font-size: 16px;
-}
-
-.statistics__table {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    text-align: center;
-    border: 1px solid #000;
-    max-width: 946px;
+.info__text-block {
+    max-width: 1100px;
     width: 100%;
     margin: 0 auto;
 }
 
-.statistics__table-players {
-    min-height: 144px;
-}
-
-.statistics__table-command {
-    min-height: 288px;
-    margin-bottom: 158px;
+.info__text-block p {
+    margin-bottom: 30px;
+    text-indent: 25px;
+    line-height: 20px;
 }
