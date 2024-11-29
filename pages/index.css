@@ -127,20 +127,31 @@ body {
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
+    min-height: 81px;
+    background-color: #6D1AD7;
 }
 
 .header__block {
     display: flex;
     gap: 20px;
+    max-width: 1257px;
     width: 100%;
     height: 100%;
     justify-content: center;
-    align-items: center;
-    background-color: #6D1AD7;
+}
+
+.header__block svg {
+    cursor: pointer;
 }
 
 .header__block a {
     text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__navigation-list {
@@ -148,25 +159,30 @@ body {
     padding: 0;
     display: flex;
     width: 100%;
-    gap: 30px;
+    height: auto;
     justify-content: space-between;
     font-size: 20px;
     color: #fff;
     text-transform: uppercase;
 }
 
+.header__navigation-list-item {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__navigation-list-item:hover {
+    background-color: #FFAD32;
+    transition: all 0.3s ease-out;
+}
+
 .header__navigation-link {
     text-decoration: none;
 }
-
-.header__buttons-block {
-    max-width: 296px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 
 /* ------ Блок ИНТРО --------- */
 .intro__image {
