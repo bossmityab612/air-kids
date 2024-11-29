@@ -1,8 +1,8 @@
-.news {
-    border: 1px solid #8b8b8b;
+.news-section {
+    box-shadow: 0px 0px 15px 5px #CCCCCC;
 }
 
-.news h2 {
+.news-section h2 {
     margin: 20px auto 53px;
     padding: 10px;
     font-size: 20px;
@@ -13,7 +13,7 @@
     width: 100%;
 }
 
-.news__cards-block-matrix {
+.news-section__cards-block-matrix {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
