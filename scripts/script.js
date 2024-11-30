@@ -5,8 +5,7 @@ const swiperLinks = {
 const matchesSwiperSettings = {
   name: ".matches-swiper",
   settings: {
-    // display: flex,
-    slidesPerView: 3,
+    slidesPerView: 1,
     speed: 1000,
     spaceBetween: 32,
     autoHeight: true,
@@ -15,7 +14,7 @@ const matchesSwiperSettings = {
     },
     breakpoints: {
       480: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       992: {
         slidesPerView: 4,
