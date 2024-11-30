@@ -62,7 +62,7 @@
 }
 
 .teams__players-cards-item {
-    padding: 10px 0 0;
+    padding: 10px;
     max-width: 194px;
     width: 100%;
     min-height: 245px;
@@ -94,6 +94,6 @@
 }
 
 .teams__players-cards-item p {
-    font-style: 12px;
+    font-size: 12px;
     line-height: 20px;
 }

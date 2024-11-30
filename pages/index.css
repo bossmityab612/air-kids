@@ -9,6 +9,10 @@
 @import url('./index-teams.css');
 @import url('./index-teams-profiles.css');
 @import url('./index-teams-full-profile.css');
+@import url('./index-teams-profiles-squad.css');
+@import url('./index-teams-profiles-schedule.css');
+@import url('./index-teams-profiles-statistics.css');
+
 
 *{
     /* outline: 1px solid green; */

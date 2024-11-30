@@ -1,9 +1,10 @@
 .players {
     background-color: #fff;
+    padding: 20px;
 }
 
 .players h2 {
-    margin: 20px auto 53px;
+    margin: 0 auto 53px;
     padding: 10px;
     font-size: 20px;
     line-height: 20px;

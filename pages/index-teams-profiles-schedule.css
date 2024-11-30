@@ -1,0 +1,29 @@
+.teams-schedule {
+    padding: 0 0 20px 0;
+}
+
+.teams select {
+    margin: 16px 0 17px 89px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #6D1AD7;
+    border-radius: 8px;
+    max-width: 200px;
+    width: 100%;
+    min-height: 40px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.teams__table-schedule {
+    max-width: 962px;
+    width: 100%;
+    height: 416px;
+}
+/* 
+.teams__block-schedule {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+} */
