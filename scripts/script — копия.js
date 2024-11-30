@@ -70,7 +70,8 @@ async function firstInputEvent(callback) {
   });
 }
 
-/*
+
+/**
 * @function loadStyle
 * @param {string} src - Download link
 * @returns {Promise<style>} Promise object represents the object style
@@ -78,30 +79,30 @@ async function firstInputEvent(callback) {
 */
 function loadStyle(src) {
   return new Promise(function(resolve, reject) {
-    let style = document.createElement("link");
-    style.href = src;
-    style.setAttribute("rel", "stylesheet");
-    
-    style.onload = () => resolve(style);
-    style.onerror = () => reject(new Error(`Style loading error ${src}`));
-    
-    document.head.append(style);
+  let style = document.createElement("link");
+  style.href = src;
+  style.setAttribute("rel", "stylesheet");
+  
+  style.onload = () => resolve(style);
+  style.onerror = () => reject(new Error(`Style loading error ${src}`));
+  
+  document.head.append(style);
   });
-}
-  /*
+  }
+  /**
   * @function loadScript
   * @param {string} src - Download link
   * @returns {Promise<script>} Promise object represents the object script
   * @description Returns a promise when loading
   */
-function loadScript(src) {
+  function loadScript(src) {
   return new Promise(function(resolve, reject) {
-    let script = document.createElement('script');
-    script.src = src;
-    
-    script.onload = () => resolve(script);
-    script.onerror = () => reject(new Error(`Script loading error ${src}`));
-    
-    document.head.append(script);
+  let script = document.createElement('script');
+  script.src = src;
+  
+  script.onload = () => resolve(script);
+  script.onerror = () => reject(new Error(`Script loading error ${src}`));
+  
+  document.head.append(script);
   });
-}
+  }

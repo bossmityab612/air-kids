@@ -206,8 +206,26 @@ body {
 }
 
 /* ---- Блок МАТЧИ расписание ----- */
-.matches {
-    border: none;
+.benefits-swiper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1170px;
+    width: 100%;
+    margin: 20px auto 0;
+    justify-content: center;
+}
+
+.matches__button-prev img {
+    width: 32px;
+    height: 32px;
+}
+
+.matches__button-next {
+    background-image: url('../images/vector-left.svg');
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
 }
 
 .matches__cards-block {
@@ -220,8 +238,7 @@ body {
 
 .matches__card-item {
     border-radius: 3px;
-    max-width: 261px;
-    width: 100%;
+    width: 261px;
     min-height: 192px;
     display: flex;
     flex-direction: column;
