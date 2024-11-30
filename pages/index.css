@@ -8,6 +8,7 @@
 @import url('./index-statistics.css');
 @import url('./index-teams.css');
 @import url('./index-teams-profiles.css');
+@import url('./index-teams-full-profile.css');
 
 *{
     /* outline: 1px solid green; */

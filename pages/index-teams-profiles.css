@@ -25,6 +25,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 7px;
+}
+
+.teams__info-logo-title-block h3 {
+    font-size: 20px;
+}
+
+.teams__info-logo-title-block h3:last-child {
+    font-size: 15px;
 }
 
 .teams__info-history {
