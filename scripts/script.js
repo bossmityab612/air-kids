@@ -2,8 +2,8 @@ const swiperLinks = {
   script: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
   style: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 }
-const benefitsSwiperSettings = {
-  name: ".benefits-swiper",
+const matchesSwiperSettings = {
+  name: ".matches-swiper",
   settings: {
     slidesPerView: 1,
     speed: 1000,
@@ -21,8 +21,8 @@ const benefitsSwiperSettings = {
       },
     },
     navigation: {
-      nextEl: '.benefits .slider__button:last-child',
-      prevEl: '.benefits .slider__button:first-child',
+      nextEl: '.matches__button-prev',
+      prevEl: '.matches__button-next',
     },
   }
 };
@@ -32,7 +32,7 @@ const benefitsSwiperSettings = {
 window.addEventListener("DOMContentLoaded", async ()=>{
   await firstInputEvent(async()=>{
     await loadLibrary(swiperLinks);
-    const testimonalsSwiper = new Swiper(testimonialSwiperSettings.name, testimonialSwiperSettings.settings);
+    const matchesSwiperSettings = new Swiper(testimonialSwiperSettings.name, testimonialSwiperSettings.settings);
   });
 });
 

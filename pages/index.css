@@ -206,7 +206,7 @@ body {
 }
 
 /* ---- Блок МАТЧИ расписание ----- */
-.benefits-swiper {
+.matches-swiper {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -214,6 +214,7 @@ body {
     width: 100%;
     margin: 20px auto 0;
     justify-content: center;
+    overflow: hidden;
 }
 
 .matches__button-prev img {
@@ -231,9 +232,7 @@ body {
 .matches__cards-block {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 32px;
 }
 
 .matches__card-item {
