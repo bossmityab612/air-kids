@@ -1,10 +1,5 @@
-.players__cards-block h4 {
-    line-height: 18px;
-    font-size: 15px;
-    min-height: 62px;
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
+.players {
+    background-color: #fff;
 }
 
 .players h2 {
@@ -16,4 +11,13 @@
     border-bottom: 1px solid #DDDDDD;
     max-width: 1100px;
     width: 100%;
+}
+
+.players__cards-block h4 {
+    line-height: 18px;
+    font-size: 15px;
+    min-height: 62px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
 }

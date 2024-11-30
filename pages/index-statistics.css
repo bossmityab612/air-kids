@@ -1,5 +1,7 @@
 .statistics {
-    border: 1px solid #8b8b8b;
+    box-shadow: 0px 0px 15px 5px #CCCCCC;
+    background-color: #fff;
+    min-height: 792px;
 }
 
 .statistics h2 {
@@ -35,6 +37,7 @@
     max-width: 946px;
     width: 100%;
     margin: 0 auto;
+    text-transform: uppercase;
 }
 
 .statistics__table-players {
@@ -43,5 +46,8 @@
 
 .statistics__table-command {
     min-height: 288px;
-    margin-bottom: 158px;
 }
+
+/* .statistics__table-command .statistics__table {
+    margin-bottom: 40px;
+} */

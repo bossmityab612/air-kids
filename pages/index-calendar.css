@@ -1,3 +1,8 @@
+.calendar {
+    background-color: #fff;
+    min-height: 758px;
+}
+
 .calendar h2 {
     margin: 20px auto 53px;
     padding: 10px;
@@ -9,10 +14,9 @@
     width: 100%;
 }
 
-.calendar__table {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
-    gap: 0px 0px;
-    justify-items: center;
+.calendar .calendar__table {
+    max-width: 962px;
+    width: 100%;
+    min-height: 416px;
+    margin-bottom: 182px;
 }
