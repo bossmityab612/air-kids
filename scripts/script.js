@@ -5,9 +5,10 @@ const swiperLinks = {
 const matchesSwiperSettings = {
   name: ".matches-swiper",
   settings: {
-    slidesPerView: 1,
+    // display: flex,
+    slidesPerView: 3,
     speed: 1000,
-    spaceBetween: 12,
+    spaceBetween: 32,
     autoHeight: true,
     a11y: {
       slideRole: 'listitem',
@@ -32,7 +33,7 @@ const matchesSwiperSettings = {
 window.addEventListener("DOMContentLoaded", async ()=>{
   await firstInputEvent(async()=>{
     await loadLibrary(swiperLinks);
-    const matchesSwiperSettings = new Swiper(testimonialSwiperSettings.name, testimonialSwiperSettings.settings);
+    const matchesSwiper = new Swiper(matchesSwiperSettings.name, matchesSwiperSettings.settings);
   });
 });
 

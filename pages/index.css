@@ -127,7 +127,6 @@ body {
   font-style: normal;
 } */
 
-
 /* ------ Шапка сайта ------- */
 .header {
     margin: 0;
@@ -210,42 +209,49 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 1170px;
     width: 100%;
     margin: 20px auto 0;
-    justify-content: center;
+    justify-content: space-between;
     overflow: hidden;
 }
 
-.matches__button-prev img {
+.matches {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1246px;
+}
+
+.matches__button img {
     width: 32px;
     height: 32px;
 }
 
+.matches__button-prev {
+    margin-right: 20px;
+}
+
 .matches__button-next {
-    background-image: url('../images/vector-left.svg');
-    border: 1px solid #000;
-    width: 20px;
-    height: 20px;
+    margin-left: 20px;
 }
 
 .matches__cards-block {
     display: flex;
     flex-direction: row;
     align-items: center;
+    max-width: 1170px;
+    width: 100%;
 }
 
 .matches__card-item {
     border-radius: 3px;
     width: 261px;
     min-height: 192px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-between;
     background-color: #fff;
     box-shadow: 0px 0px 15px 5px #CCCCCC;
 }
-
 
 .matches__card-item-title {
     background-color: #C7C7C7;
