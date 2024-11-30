@@ -16,8 +16,11 @@
 .teams__info-logo-title {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+}
+
+.teams__info-logo-title img {
+    margin-right: 40px;
 }
 
 .teams__info-logo-title-block {
@@ -30,6 +33,7 @@
 
 .teams__info-logo-title-block h3 {
     font-size: 20px;
+    font-weight: bold;
 }
 
 .teams__info-logo-title-block h3:last-child {

@@ -7,7 +7,6 @@
     margin: 0 auto;
     padding: 50px auto;
     display: flex;
-    flex-direction: column;
     background-color: #6D1AD7;
     border-radius: 10px;
     min-height: 228px;
@@ -23,6 +22,7 @@
     height: 190px;
     object-fit: cover;
     margin: auto 49px 22px;
+    margin-right: 40px;
 }
 
 .teams__block-full-text h3 {
@@ -33,6 +33,7 @@
 .teams__block-full-text p {
     line-height: 20px;
     padding: 0 0 8px 0;
+    font-size: 12px;
 }
 
 .teams__block-full-text {
