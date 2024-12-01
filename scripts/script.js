@@ -110,11 +110,13 @@ function loadScript(src) {
 
 // Бургер
 
-$(document).ready(function() {
-  $(document).ready(function() {
-    $('.burger').click(function() {
-      $('.burger, .burger__lines').toggleClass('active');
-      $('.header__navigation-list').slideToggle();
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const navigationList = document.querySelector('.header__navigation-list');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navigationList.style.display = navigationList.style.display === 'none' ? 'block' : 'none';
   });
 });
+
