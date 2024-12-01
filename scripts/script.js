@@ -1,3 +1,4 @@
+// Слайдер с расписанием 
 const swiperLinks = {
   script: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
   style: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -14,7 +15,7 @@ const matchesSwiperSettings = {
     },
     breakpoints: {
       480: {
-        slidesPerView: 1,
+        slidesPerView: 2,
       },
       992: {
         slidesPerView: 4,
@@ -26,6 +27,7 @@ const matchesSwiperSettings = {
     },
   }
 };
+
 
 // Загрузка и инициализация
 
@@ -105,3 +107,14 @@ function loadScript(src) {
     document.head.append(script);
   });
 }
+
+// Бургер
+
+$(document).ready(function() {
+  $(document).ready(function() {
+    $('.burger').click(function() {
+      $('.burger, .burger__lines').toggleClass('active');
+      $('.header__navigation-list').slideToggle();
+    });
+  });
+});
