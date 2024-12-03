@@ -33,7 +33,7 @@ header a {
     background-color: #FFAD32;
 }
 
-header a:hover {
+.teams header a:hover {
     background-color: #5511AB;
     transition: all .3s ease-in;
 }

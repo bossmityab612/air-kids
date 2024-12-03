@@ -12,6 +12,7 @@
 @import url('./index-teams-profiles-squad.css');
 @import url('./index-teams-profiles-schedule.css');
 @import url('./index-teams-profiles-statistics.css');
+@import url('./index-TABLE.css');
 
 
 *{
@@ -138,7 +139,7 @@ body {
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
-    min-height: 81px;
+    max-height: 81px;
     background-color: #6D1AD7;
     position: relative;
 }
@@ -150,11 +151,22 @@ body {
     width: 100%;
     height: 100%;
     justify-content: center;
+    margin: auto 0;
 }
 
-.header__block svg {
-    cursor: pointer;
+.header__logo-link {
+    max-width: 109px;
+    width: 100%;
+    min-height: 81px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/Logo.svg');
+    object-fit: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
+
 
 .header__navigation-list a {
     text-decoration: none;
@@ -410,118 +422,101 @@ body {
     text-transform: uppercase;
 }
 
-.schedule__play-off-block {
+.play-off {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 43px;
-    width: 100%;
-    min-height: 444px;
+    gap: 50px;
+    margin-bottom: 35px;
 }
 
-.schedule__play-off-item {
-    max-width: 237px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.play-off__main {
+    margin-bottom: 30px;
 }
 
-.schedule__play-off-item h2 {
-    width: 100%;
-    min-height: 25px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #FFAD32;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-width: 1px 1px 0 1px;
-    border-style: solid;
-    border-color: #E1E1E1;
-}
-
-.schedule__play-off-item table {
-    min-height: 50px;
-    max-width: 237px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.schedule__play-off-table-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: auto 0;
-    min-height: 327px;
-    align-items: flex-end;
-}
-
-.schedule__play-off-table-block table, tr{
-    border: 1px solid rgb(0, 0, 0);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.schedule__play-off-table-block table caption{
-    margin: 0 0 5px 0;
-    line-height: 22px;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.schedule__play-off-table-block svg{
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
-}
-
-.schedule__play-off-table-block p {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
+.play-off__title {
     font-weight: bold;
-}
-
-.schedule__play-off-item table td {
-    padding: 0 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.schedule__third-place {
-    max-width: 252px;
-    min-height: 105px;
-    display: flex;
-    width: 100%;
-}
-
-.schedule__third-place td {
-    display: flex;
-    justify-content: space-between;
-}
-
-.schedule__third-place p {
-    height: 26px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333333;
-    background-color: #E1E1E1;
+    font-size: 20px;
+    line-height: 26px;
     text-transform: uppercase;
 }
 
-.schedule__third-place caption {
+.play-off__header {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 65px;
+}
+.play-off__head {
+    text-align: center;
+    background: #ffad32;
+    color: #fff;
+    line-height: 25px;
+    border: 1px solid #e1e1e1;
+}
+
+.play-off__step {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.play-off__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.play-off__item,
+.play-off__head {
+    width: 236.5px;
+}
+
+.play-off__caption {
     font-size: 10px;
-    color: #A4A4A4;
+    padding: 5px 0;
+    color: #a4a4a4;
+}
+
+.play-off__team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #000;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 25px;
+    padding: 0 4px;
+}
+.play-off__team_winner {
+    background-color: #6d1ad74d;
+}
+.play-off__team:last-of-type {
+    border-top: none;
+}
+.play-off__team p {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+.play-off__item_thirdplace {
+    border: 1px solid #e1e1e1;
+    margin-left: auto;
+}
+
+.play-off__item_thirdplace .play-off__item-header {
+    background: #edeff9;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px;
+    text-wrap: 600;
+    text-align: center;
+}
+.play-off__item_thirdplace .play-off__team {
+    border: none;
+    border-top: 1px solid #e1e1e1;
+}
+.play-off__item_thirdplace .play-off__caption {
+    padding-left: 12px;
 }
 
 /* ---- ТАБЛИЦА МАТЧЕЙ ---- */
