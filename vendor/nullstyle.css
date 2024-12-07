@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     border: 0;
+    font-family: sans-serif;
 }
 *,
 *::before,
@@ -18,6 +19,13 @@ a:focus,
 a:active {
     outline: none;
 }
+
+:root {
+    /* --inter: 'Inter', Arial, Helvetica, sans-serif; */
+    --bicubik: 'Bicubik', Arial, Helvetica, sans-serif;
+    --montserrat: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
 html,
 body {
     width: 100%;

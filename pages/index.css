@@ -20,86 +20,6 @@
     box-sizing: border-box;
 }
 
-*::before,
-*::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
-:root {
-    /* --inter: 'Inter', Arial, Helvetica, sans-serif; */
-    --bicubik: 'Bicubik', Arial, Helvetica, sans-serif;
-    --montserrat: 'Montserrat', Arial, Helvetica, sans-serif;
-}
-
-*,
-*::before,
-*::after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-:focus,
-:active {
-    outline: none;
-}
-a:focus,
-a:active {
-    outline: none;
-}
-html,
-body {
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-input,
-button,
-textarea {
-    font-family: inherit;
-}
-input::-ms-clear {
-    display: none;
-}
-button {
-    cursor: pointer;
-}
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-a,
-a:visited {
-    text-decoration: none;
-    color: inherit;
-}
-a:hover {
-    text-decoration: none;
-    color: inherit;
-}
-ul li,
-li {
-    list-style: none;
-}
-/* img {
-    vertical-align: top;
-} */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: inherit;
-    font-weight: 400;
-}
-
 body {
     width: 100%;
     max-width: 1903px;
@@ -120,15 +40,6 @@ body {
 .content {
     background-color: #F2F2F2;
 }
-
-/* .montserrat-font {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-} */
-
-
 
 /* ------ Шапка сайта ------- */
 .header {
@@ -167,15 +78,22 @@ body {
     background-position: 50% 50%;
 }
 
+.header__navigation-list li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 .header__navigation-list a {
     text-decoration: none;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
+    width: fit-content;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .header__navigation-list {
@@ -232,6 +150,10 @@ body {
     margin: 20px auto 0;
     justify-content: space-between;
     overflow: hidden;
+}
+
+.swiper-horizontal {
+    padding:16px;
 }
 
 .matches {
@@ -386,11 +308,16 @@ body {
 
 /* ----- Блок СЕРЫЙ БЛОК-1 ----- */
 
+.grey-block {
+    width: 100%;
+    background-color: #909090;
+}
+
+/* ----- Блок СЕРЫЙ БЛОК-1 ----- */
 .grey-block-1 {
     margin: 40px auto;
     width: 100%;
     min-height: 143px;
-    background-color: #909090;
 }
 
 /* ----- Блок РАСПИСАНИЕ ----- */
@@ -668,6 +595,11 @@ footer {
     width: 100%;
 }
 
+.footer__links-block-item li {
+    display: flex;
+    justify-content: center;
+}
+
 .footer__links-block-item a {
     margin: 0;
     color: #fff;
@@ -676,6 +608,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: fit-content;
     font-size: 20px;
     line-height: 20px;
     font-weight: bold;
