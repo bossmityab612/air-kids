@@ -466,7 +466,8 @@ body {
 }
 .play-off__item,
 .play-off__head {
-    width: 236.5px;
+    max-width: 236.5px;
+    width: 100%;
 }
 
 .play-off__caption {
@@ -606,8 +607,8 @@ body {
 .area8 { grid-area: area8; }
 
 .photo-galery-image-item {
+    /* max-width: 739px; */
     width: 100%;
-    min-height: 491px;
     object-fit: cover;
 }
 
@@ -618,6 +619,7 @@ body {
 .grey-block-2 {
     margin: 40px auto 0;
     width: 100%;
+    min-height: 100px;
     min-height: 424px;
     background-color: #909090;
 }
@@ -682,15 +684,31 @@ footer {
 
 /* ----- Медиа-запросы ---- */
 
-@media screen and (max-width: 1140px) {
-    .container {
-        max-width: 100%;
+@media screen and (max-width: 1024px) {
+    .grey-block-2 {
+        min-height: 225px;
     }
 }
 
 @media screen and (max-width: 956px) {
     .header__navigation-list {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .play-off {
+        max-width: 950px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .play-off__header {
+        gap: 30px;
+    }
+
+    .play-off__step {
+        gap: 30px;
     }
 }
 
@@ -704,7 +722,6 @@ footer {
         display: block;
     }
 
-    
     .header__navigation-list {
         display: flex;
         flex-direction: column;
@@ -718,6 +735,7 @@ footer {
     .header__navigation-list {
         display: none;
     }
+
     .burger {
         display: flex;
         justify-content: center;
@@ -751,13 +769,17 @@ footer {
         background-color: #fff;
     }
 
+    .grey-block-1 {
+        margin: 0 auto 40px;
+    }
+
     .schedule__play-off-block {
         flex-direction: column;
         align-items: center;
     }
 
     .footer__links-block-item a {
-        font-size: 8px;
+        font-size: 15px;
     }
 
     .footer__block img {
@@ -767,7 +789,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 525px) {
     .header__navigation-list {
         font-size: 7px;
     }
@@ -775,4 +797,53 @@ footer {
     header a {
         padding: 10px 0px;
     }
+
+    .play-off__head {
+        font-size: 12px;
+    }
+
+    .play-off__header {
+        gap: 15px;
+    }
+
+    .play-off__step {
+        gap: 15px;
+    }
+
+    .play-off__team {
+        font-size: 10px;
+    }
+
+    .play-off__team svg {
+        width: 14px;
+    }
+
+    .grey-block-2 {
+        min-height: 160px;
+    }
+
+    .footer__links-block-item a {
+        font-size: 12px;
+    }
 }
+
+@media screen and (max-width: 375px) {
+    .footer__links-block-item a {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .play-off__header {
+        gap: 9px;
+    }
+
+    .play-off__team {
+        font-size: 7px;
+    }
+
+    .play-off__step {
+        gap: 9px;
+    }
+}
+

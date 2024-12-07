@@ -16,8 +16,14 @@
     width: 100%;
 }
 
+.statistics__select-block {
+    max-width: 946px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .statistics select {
-    margin: 16px auto 16px 97px;
+    margin: 16px auto;
     background-color: #6D1AD7;
     border-radius: 8px;
     max-width: 199px;
@@ -49,6 +55,3 @@
     min-height: 288px;
 }
 
-/* .statistics__table-command .statistics__table {
-    margin-bottom: 40px;
-} */
