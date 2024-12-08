@@ -1,8 +1,9 @@
+
 // Слайдер с расписанием 
 const swiperLinks = {
   script: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
-  style: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-}
+  style: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+};
 
 // Слайдер для карточек краткого расписания матчей
 const matchesSwiperSettings = {
@@ -111,20 +112,120 @@ function loadScript(src) {
 }
 
 // ------------ Слайдер для Интро -----------
-const swiperIntro = new swiperIntro('.intro', {
-  sattings: {
-    slidesPerView: 1,
-    loop: true,
-  },
 
-  pagination: {
-    el: '.intro .swiper-pagination',
-  },
 
-    nextEl: '.intro .swiper-button-next',
-    prevEl: '.intro .swiper-button-prev',
-  },
-);
+window.addEventListener("DOMContentLoaded", () => {
+  loadLibrary(swiperLinks).then(() => {
+    if (typeof swiperIntroSlider !== 'undefined') {
+      const introSwiper = new swiperIntroSlider('.intro', {
+        settings: {
+          slidesPerView: 1,
+          loop: true,
+          observer: true,
+          observeParents: true,
+        },
+      
+        pagination: {
+          el: '.intro .swiper-pagination',
+        },
+      
+        navigation: {
+          nextEl: '.intro .swiper-button-next',
+          prevEl: '.intro .swiper-button-prev',
+        },
+      
+        modules: [Navigation, Pagination],
+        
+        speed: 400,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
+        slideVisibleClass: 'swiper-slide-visible',
+        
+        // Дополнительные настройки для динамического контента
+        observer: true,
+        observeParents: true,
+        updateOnWindowResize: false,
+        updateOnImagesReady: true,
+      });
+      console.log(introSwiper);
+    } else {
+      console.error('Swiper не определена');
+    }
+  });
+});
+
+
+// if (typeof Swiper !== 'undefined') {
+//   const introSwiper = new Swiper('.intro', {
+//     settings: {
+//       slidesPerView: 1,
+//       loop: true,
+//       observer: true,
+//       observeParents: true,
+//     },
+  
+//     pagination: {
+//       el: '.intro .swiper-pagination',
+//     },
+  
+//     navigation: {
+//       nextEl: '.intro .swiper-button-next',
+//       prevEl: '.intro .swiper-button-prev',
+//     },
+  
+//     modules: [Navigation, Pagination],
+    
+//     speed: 400,
+//     watchSlidesProgress: true,
+//     watchSlidesVisibility: true,
+//     slideVisibleClass: 'swiper-slide-visible',
+    
+//     Дополнительные настройки для динамического контента
+//     observer: true,
+//     observeParents: true,
+//     updateOnWindowResize: false,
+//     updateOnImagesReady: true,
+//   });
+
+//   console.log(introSwiper);
+// } else {
+//   console.error('Swiper не определена');
+// }
+
+
+// const swiperIntro = new swiperIntroSlider('.intro', {
+//   settings: {
+//     slidesPerView: 1,
+//     loop: true,
+//     observer: true,
+//     observeParents: true,
+//   },
+
+//   pagination: {
+//     el: '.intro .swiper-pagination',
+//   },
+
+//   navigation: {
+//     nextEl: '.intro .swiper-button-next',
+//     prevEl: '.intro .swiper-button-prev',
+//   },
+
+//   modules: [Navigation, Pagination],
+  
+//   speed: 400,
+//   watchSlidesProgress: true,
+//   watchSlidesVisibility: true,
+//   slideVisibleClass: 'swiper-slide-visible',
+  
+//   Дополнительные настройки для динамического контента
+//   observer: true,
+//   observeParents: true,
+//   updateOnWindowResize: false,
+//   updateOnImagesReady: true,
+// });
+
+// console.log(swiperIntro);
+
 // ------------ /Слайдер для Интро -----------
 
 // Бургер

@@ -141,6 +141,7 @@ body {
 .intro__image {
     overflow: hidden;
     display: flex;
+    flex-direction: row;
 }
 
 .intro__image img {
