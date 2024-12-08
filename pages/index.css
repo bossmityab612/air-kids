@@ -149,6 +149,7 @@ body {
     width: 100%;
     max-height: 600px;
     object-position: 50% 55%;
+    display: flex;
 }
 
 .intro__button-left {
@@ -179,6 +180,16 @@ body {
     right: 20px;
     z-index: 2;
 }
+
+/* .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: '';
+    opacity: 0;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: '';
+    opacity: 0;
+} */
 
 /* ---- Блок МАТЧИ расписание ----- */
 .matches-swiper {

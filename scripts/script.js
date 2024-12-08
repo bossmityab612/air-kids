@@ -24,8 +24,8 @@ const matchesSwiperSettings = {
       },
     },
     navigation: {
-      nextEl: '.matches__button-prev',
-      prevEl: '.matches__button-next',
+      nextEl: '.matches__button-next',
+      prevEl: '.matches__button-prev',
     },
   }
 };
@@ -110,6 +110,23 @@ function loadScript(src) {
   });
 }
 
+// ------------ Слайдер для Интро -----------
+const swiperIntro = new swiperIntro('.intro', {
+  sattings: {
+    slidesPerView: 1,
+    loop: true,
+  },
+
+  pagination: {
+    el: '.intro .swiper-pagination',
+  },
+
+    nextEl: '.intro .swiper-button-next',
+    prevEl: '.intro .swiper-button-prev',
+  },
+);
+// ------------ /Слайдер для Интро -----------
+
 // Бургер
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -122,17 +139,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const swiper = new swiperIntro('.intro__image', {
-  // Optional parameters
-  loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.intro__image .swiper-pagination',
-  },
-
-  // Navigation arrows
-    nextEl: '.intro__image .swiper-button-next',
-    prevEl: '.intro__image .swiper-button-prev',
-  },
-);
