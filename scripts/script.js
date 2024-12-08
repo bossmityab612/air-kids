@@ -32,6 +32,8 @@ const matchesSwiperSettings = {
 };
 
 
+
+
 // Загрузка и инициализация
 
 window.addEventListener("DOMContentLoaded", async ()=>{
@@ -47,6 +49,8 @@ async function loadLibrary(libraryObj){
   if(libraryObj.style) await loadStyle(libraryObj.style);
   if(libraryObj.script) await loadScript(libraryObj.script);
 }
+
+
 
 // Скрипт отложенной загрузки
 
@@ -75,6 +79,8 @@ async function firstInputEvent(callback) {
   });
 }
 
+
+
 /*
 * @function loadStyle
 * @param {string} src - Download link
@@ -93,12 +99,15 @@ function loadStyle(src) {
     document.head.append(style);
   });
 }
+
   /*
   * @function loadScript
   * @param {string} src - Download link
   * @returns {Promise<script>} Promise object represents the object script
   * @description Returns a promise when loading
   */
+
+
 function loadScript(src) {
   return new Promise(function(resolve, reject) {
     let script = document.createElement('script');
@@ -112,8 +121,6 @@ function loadScript(src) {
 }
 
 // ------------ Слайдер для Интро -----------
-
-
 window.addEventListener("DOMContentLoaded", () => {
   loadLibrary(swiperLinks).then(() => {
     if (typeof swiperIntroSlider !== 'undefined') {
@@ -153,78 +160,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-
-// if (typeof Swiper !== 'undefined') {
-//   const introSwiper = new Swiper('.intro', {
-//     settings: {
-//       slidesPerView: 1,
-//       loop: true,
-//       observer: true,
-//       observeParents: true,
-//     },
-  
-//     pagination: {
-//       el: '.intro .swiper-pagination',
-//     },
-  
-//     navigation: {
-//       nextEl: '.intro .swiper-button-next',
-//       prevEl: '.intro .swiper-button-prev',
-//     },
-  
-//     modules: [Navigation, Pagination],
-    
-//     speed: 400,
-//     watchSlidesProgress: true,
-//     watchSlidesVisibility: true,
-//     slideVisibleClass: 'swiper-slide-visible',
-    
-//     Дополнительные настройки для динамического контента
-//     observer: true,
-//     observeParents: true,
-//     updateOnWindowResize: false,
-//     updateOnImagesReady: true,
-//   });
-
-//   console.log(introSwiper);
-// } else {
-//   console.error('Swiper не определена');
-// }
-
-
-// const swiperIntro = new swiperIntroSlider('.intro', {
-//   settings: {
-//     slidesPerView: 1,
-//     loop: true,
-//     observer: true,
-//     observeParents: true,
-//   },
-
-//   pagination: {
-//     el: '.intro .swiper-pagination',
-//   },
-
-//   navigation: {
-//     nextEl: '.intro .swiper-button-next',
-//     prevEl: '.intro .swiper-button-prev',
-//   },
-
-//   modules: [Navigation, Pagination],
-  
-//   speed: 400,
-//   watchSlidesProgress: true,
-//   watchSlidesVisibility: true,
-//   slideVisibleClass: 'swiper-slide-visible',
-  
-//   Дополнительные настройки для динамического контента
-//   observer: true,
-//   observeParents: true,
-//   updateOnWindowResize: false,
-//   updateOnImagesReady: true,
-// });
-
-// console.log(swiperIntro);
 
 // ------------ /Слайдер для Интро -----------
 
