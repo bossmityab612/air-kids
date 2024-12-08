@@ -386,15 +386,21 @@ body {
 }
 
 .play-off__column {
+    gap: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
 }
+
+.play-off__column:first-child {
+    gap: 20px;
+    border: 1px solid red;
+
+}
+
 .play-off__item,
 .play-off__head {
-    max-width: 236.5px;
-    width: 100%;
+    width: 237px;
 }
 
 .play-off__caption {
@@ -629,7 +635,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 975px) {
     .play-off {
         max-width: 950px;
         width: 100%;
@@ -642,7 +648,11 @@ footer {
 
     .play-off__step {
         gap: 30px;
+    
     }
+    .play-off__item,.play-off__head {
+    max-width: 237px;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
