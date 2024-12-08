@@ -3,6 +3,8 @@ const swiperLinks = {
   script: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
   style: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 }
+
+// Слайдер для карточек краткого расписания матчей
 const matchesSwiperSettings = {
   name: ".matches-swiper",
   settings: {
@@ -120,3 +122,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const swiper = new swiperIntro('.intro__image', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.intro__image .swiper-pagination',
+  },
+
+  // Navigation arrows
+    nextEl: '.intro__image .swiper-button-next',
+    prevEl: '.intro__image .swiper-button-prev',
+  },
+);
