@@ -611,8 +611,8 @@ body {
 .area8 { grid-area: area8; }
 
 .photo-galery-image-item {
-    /* max-width: 739px; */
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
