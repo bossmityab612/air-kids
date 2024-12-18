@@ -206,6 +206,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    max-width: 1170px;
     width: 100%;
     margin: 20px auto 0;
     justify-content: space-between;
@@ -219,7 +220,7 @@ body {
 .matches {
     display: flex;
     margin: 0 auto;
-    max-width: 1246px;
+    max-width: 1270px;
 }
 
 .matches__button img {
@@ -241,11 +242,13 @@ body {
     align-items: center;
     max-width: 1170px;
     width: 100%;
+    gap: 32px;
 }
 
 .matches__card-item.swiper-slide {
     border-radius: 3px;
-    width: 261px;
+    max-width: 261px;
+    width: 100%;
     min-height: 192px;
     display: flex;
     flex-direction: column;

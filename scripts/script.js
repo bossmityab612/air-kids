@@ -16,14 +16,14 @@ const introSwiper = new Swiper('.intro', {
 
 const matchesSwiper = new Swiper('.matches-swiper', {
   // Настройки слайдера
-  slidesPerView: 3,
+  slidesPerView: 4,
   loop: true,
   pagination: {
     el: '.intro-pagination',
   },
   navigation: {
     nextEl: '.matches__button-next',
-    prevEl: '.matches__button-right'
+    prevEl: '.matches__button-prev'
   },
 });
 
