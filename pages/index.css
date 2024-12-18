@@ -136,12 +136,17 @@ body {
     display: flex;
     flex-direction: row;
     position: relative;
+    overflow: hidden; 
 }
 
 .intro__image {
-    overflow: hidden;
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    color: #fff;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .intro__image img {
@@ -151,6 +156,10 @@ body {
     max-height: 600px;
     object-position: 50% 55%;
     display: flex;
+}
+
+.swiper-horizontal.intro  {
+    padding: 0;
 }
 
 .intro__button-left {
@@ -182,7 +191,7 @@ body {
     z-index: 2;
 }
 
-/* .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
     content: '';
     opacity: 0;
 }
@@ -190,7 +199,7 @@ body {
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
     content: '';
     opacity: 0;
-} */
+} 
 
 /* ---- Блок МАТЧИ расписание ----- */
 .matches-swiper {
@@ -204,7 +213,7 @@ body {
 }
 
 .swiper-horizontal {
-    padding:16px;
+    padding: 16px;
 }
 
 .matches {
