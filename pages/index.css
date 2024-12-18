@@ -153,6 +153,7 @@ body {
     object-fit: cover;
     max-width: 1904px;
     width: 100%;
+    height: auto;
     max-height: 600px;
     object-position: 50% 55%;
     display: flex;
@@ -203,6 +204,7 @@ body {
 
 /* ---- Блок МАТЧИ расписание ----- */
 .matches-swiper {
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -210,7 +212,6 @@ body {
     width: 100%;
     margin: 20px auto 0;
     justify-content: space-between;
-    overflow: hidden;
 }
 
 .swiper-horizontal {
@@ -218,6 +219,7 @@ body {
 }
 
 .matches {
+    position: relative;
     display: flex;
     margin: 0 auto;
     max-width: 1270px;
@@ -230,10 +232,20 @@ body {
 
 .matches__button-prev {
     margin-right: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: transparent;
+    z-index: 2;
 }
 
 .matches__button-next {
     margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background-color: transparent;
+    z-index: 2;
 }
 
 .matches__cards-block {
@@ -242,12 +254,10 @@ body {
     align-items: center;
     max-width: 1170px;
     width: 100%;
-    /* gap: 32px; */
 }
 
 .matches__card-item.swiper-slide {
     border-radius: 3px;
-    /* max-width: 261px; */
     width: 100%;
     min-height: 192px;
     display: flex;
@@ -683,6 +693,13 @@ footer {
 }
 
 /* ----- Медиа-запросы ---- */
+
+/* @media screen and (max-width: 1220px) {
+    .matches-swiper {
+        max-width: 990px;
+    }
+} */
+
 
 @media screen and (max-width: 1024px) {
     .grey-block-2 {
