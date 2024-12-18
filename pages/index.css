@@ -247,7 +247,7 @@ body {
 
 .matches__card-item.swiper-slide {
     border-radius: 3px;
-    max-width: 261px;
+    /* max-width: 261px; */
     width: 100%;
     min-height: 192px;
     display: flex;

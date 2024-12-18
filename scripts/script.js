@@ -17,11 +17,8 @@ const introSwiper = new Swiper('.intro', {
 const matchesSwiper = new Swiper('.matches-swiper', {
   // Настройки слайдера
   slidesPerView: 1,
-  spaceBetween: 32,
+  spaceBetween: 23,
   loop: true,
-  pagination: {
-    el: '.intro-pagination',
-  },
   navigation: {
     nextEl: '.matches__button-next',
     prevEl: '.matches__button-prev'
@@ -29,11 +26,25 @@ const matchesSwiper = new Swiper('.matches-swiper', {
   breakpoints: {
     480: {
       slidesPerView: 2,
+      spaceBetween: 26
     },
     992: {
       slidesPerView: 4,
+      spaceBetween: 32
     },
   },
 });
 
 // ------ /Слайдер для расписания матчей
+
+// Бургер
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const navigationList = document.querySelector('.header__navigation-list');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navigationList.style.display = navigationList.style.display === 'none' ? 'block' : 'none';
+  });
+});
