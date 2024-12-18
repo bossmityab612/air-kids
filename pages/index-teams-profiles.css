@@ -97,3 +97,10 @@
     font-size: 12px;
     line-height: 20px;
 }
+
+
+@media screen and (max-width: 425px) {
+    .teams__block {
+        flex-direction: column;
+    }
+}

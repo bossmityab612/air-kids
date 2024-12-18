@@ -326,7 +326,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -574,8 +573,6 @@ body {
 }
 
 .schedule_schedule-table-A td {
-    /* min-width: 50px;
-    max-width: 284px; */
     width: 100%;
 }
 
@@ -594,21 +591,37 @@ body {
         "area7 area7 area8";
 }
     
-.area1 { grid-area: area1; }
+.area1 {
+    grid-area: area1;
+}
 
-.area2 { grid-area: area2; }
+.area2 {
+    grid-area: area2;
+}
 
-.area3 { grid-area: area3; }
+.area3 {
+    grid-area: area3;
+}
 
-.area4 { grid-area: area4; }
+.area4 {
+    grid-area: area4;
+}
 
-.area5 { grid-area: area5; }
+.area5 {
+    grid-area: area5;
+}
 
-.area6 { grid-area: area6; }
+.area6 {
+    grid-area: area6;
+}
 
-.area7 { grid-area: area7; }
+.area7 {
+    grid-area: area7;
+}
 
-.area8 { grid-area: area8; }
+.area8 {
+    grid-area: area8;
+}
 
 .photo-galery-image-item {
     width: 100%;
@@ -694,11 +707,12 @@ footer {
 
 /* ----- Медиа-запросы ---- */
 
-/* @media screen and (max-width: 1220px) {
-    .matches-swiper {
-        max-width: 990px;
+@media screen and (max-width: 1140px) {
+    .news__cards-block {
+        gap: 12px;
+        padding: 0 12px;
     }
-} */
+}
 
 
 @media screen and (max-width: 1024px) {
@@ -790,6 +804,11 @@ footer {
         background-color: #fff;
     }
 
+    .news__cards-block {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
     .grey-block-1 {
         margin: 0 auto 40px;
     }
@@ -845,6 +864,14 @@ footer {
 
     .footer__links-block-item a {
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .teams__logos {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
     }
 }
 
