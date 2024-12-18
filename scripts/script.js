@@ -17,6 +17,7 @@ const introSwiper = new Swiper('.intro', {
 const matchesSwiper = new Swiper('.matches-swiper', {
   // Настройки слайдера
   slidesPerView: 4,
+  spaceBetween: 32,
   loop: true,
   pagination: {
     el: '.intro-pagination',

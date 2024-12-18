@@ -242,7 +242,7 @@ body {
     align-items: center;
     max-width: 1170px;
     width: 100%;
-    gap: 32px;
+    /* gap: 32px; */
 }
 
 .matches__card-item.swiper-slide {
