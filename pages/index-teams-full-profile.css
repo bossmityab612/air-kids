@@ -5,8 +5,7 @@
 
 .teams__full-info {
     margin: 0 auto;
-    padding: 50px auto;
-    display: flex;
+    padding: 50px 0;
     background-color: #6D1AD7;
     border-radius: 10px;
     min-height: 228px;
@@ -50,4 +49,11 @@
     max-width: 910px;
     width: 100%;
     min-height: 108px;
+}
+
+@media screen and (max-width: 563px) {
+    .teams__full-info {
+        flex-direction: column;
+        align-items: center;
+    }
 }
