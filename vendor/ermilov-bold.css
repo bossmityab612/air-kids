@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'Ermilov-Bold';
+	font-weight: 600;
+	src: url('./ermilov-fonts/ermilov-bold.woff2')  format('woff2'),
+		url('../ermilov-fonts/ermilov-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../ermilov-fonts/ermilov-bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}

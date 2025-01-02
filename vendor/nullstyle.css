@@ -20,12 +20,6 @@ a:active {
     outline: none;
 }
 
-:root {
-    /* --inter: 'Inter', Arial, Helvetica, sans-serif; */
-    --bicubik: 'Bicubik', Arial, Helvetica, sans-serif;
-    --montserrat: 'Montserrat', Arial, Helvetica, sans-serif;
-}
-
 html,
 body {
     width: 100%;

@@ -1,7 +1,6 @@
-@import url('./index-news.css');
 @import url('../vendor/nullstyle.css'); /* ОБНУЛЕНИЕ */
-@import url('../vendor/bicubik.css');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('../vendor/ermilov-bold.css'); /* Шрифт Ермилов  */
+@import url('./index-news.css');
 @import url('./index-info.css');
 @import url('./index-calendar.css');
 @import url('./index-players.css');
@@ -12,7 +11,6 @@
 @import url('./index-teams-profiles-squad.css');
 @import url('./index-teams-profiles-schedule.css');
 @import url('./index-teams-profiles-statistics.css');
-@import url('./index-TABLE.css');
 
 
 *{
@@ -20,12 +18,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --ermilov-bold: 'Ermilov-Bold', Arial, Helvetica, sans-serif;
+}
 
 body {
     width: 100%;
     max-width: 1903px;
     margin: 0 auto;
-    font-family: var(--montserrat);
     position: relative;
     background-color: #F2F2F2;
 }   
@@ -88,7 +88,6 @@ body {
 
 .header__navigation-list a {
     text-decoration: none;
-    /* width: 100%; */
     height: 100%;
     text-align: center;
     display: flex;
@@ -396,46 +395,68 @@ body {
 /* ----- Блок РАСПИСАНИЕ ----- */
 
 /* ---------- Таблица -------- */
+
 .statistics__table {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    text-align: center;
-    border: 1px solid #000;
-    max-width: 946px;
     width: 100%;
-    margin: 0 auto;
-}
-
-.schedule .statistics__table{
-    width: 100%;
-    max-width: 100%;
-    margin: 20px 0;
+    margin: 20px 0; 
     border-collapse: collapse;
+    font-family: var(--ermilov-bold);
+}
+
+.statistics__table thead {
+    background-color: #6D1AD7;
+    color: #fff;
+}
+
+.statistics__table thead tr td {
+    padding: 20px;
+    text-align: center;
+}
+
+.statistics__table tbody tr td {
+    padding: 20px;
+    text-align: center;
+}
+
+.statistics__table tbody tr td div {
     display: flex;
+    gap: 13px;
+}
+
+.statistics__table tbody tr td ul {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    justify-content: center;
+}
+
+.statistics__table tbody tr td ul li span {
+    margin: 0;
+    padding: 0;
     text-align: center;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #0FD400;
 }
 
-.schedule .statistics__table thead {
-    width: 100%;
-    border: 1px solid blue;
+/* .statistics__table tbody tr td ul li span:nth-child(2) {
+    background-color: #EE4D3E;
+} */
+
+.statistics__table tbody tr td:nth-child(2) {
+    text-align: left;
+    padding: 20px 0;
 }
 
-.schedule .statistics__table thead tr {
-    border: 1px solid yellow; 
-    width: 100%;
-    text-align: center;
+.statistics__table tbody tr:nth-child(odd) {
+    background-color: #FFAD3280;
 }
 
-.schedule .statistics__table tbody td {
-    border: 1px solid red; 
-    padding: 2rem;
+.statistics__table tbody tr:nth-child(even) {
+    background-color: #F7F8FF;
 }
-
-.schedule .statistics__table tbody {
-    border: 1px solid green; 
-}
-
 
 /* ---------- /Таблица -------- */
 
