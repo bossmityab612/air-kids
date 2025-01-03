@@ -1,5 +1,5 @@
 @import url('../vendor/nullstyle.css'); /* ОБНУЛЕНИЕ */
-@import url('../vendor/ermilov-bold.css'); /* Шрифт Ермилов  */
+/* @import url('../vendor/ermilov-bold.css'); Шрифт Ермилов  */
 @import url('./index-news.css');
 @import url('./index-info.css');
 @import url('./index-calendar.css');
@@ -396,11 +396,20 @@ body {
 
 /* ---------- Таблица -------- */
 
+@font-face {
+	font-family: 'Ermilov-Bold';
+	font-weight: 600;
+	src:	url('../vendor/ermilov-fonts/ermilov-bold.woff2')  format('woff2'),
+            url('../vendor/ermilov-fonts/ermilov-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+            url('../vendor/ermilov-fonts/ermilov-bold.ttf') format('truetype'); /* Safari, Android, iOS */
+} 
+
 .statistics__table {
     width: 100%;
     margin: 20px auto; 
     border-collapse: collapse;
-    font-family: var(--ermilov-bold);
+    font-family: 'Ermilov-Bold', Arial, Helvetica, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     display: block;
     overflow-x: auto;
 }

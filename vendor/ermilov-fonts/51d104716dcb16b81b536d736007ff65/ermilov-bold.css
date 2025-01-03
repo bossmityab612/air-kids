@@ -1,9 +1,0 @@
-@font-face {
-	font-family: 'Ermilov-Bold';
-	src: url('../fonts/ermilov-bold.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/ermilov-bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/ermilov-bold.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/ermilov-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/ermilov-bold.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/ermilov-bold.svg#ermilov-bold') format('svg'); /* Chrome < 4, Legacy iOS */
-}
