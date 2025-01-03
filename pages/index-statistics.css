@@ -6,7 +6,7 @@
 }
 
 .statistics h2 {
-    margin: 0 auto 53px;
+    margin: 0 0 53px;
     padding: 10px;
     font-size: 20px;
     line-height: 20px;
@@ -19,7 +19,7 @@
 .statistics__select-block {
     max-width: 946px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .statistics select {

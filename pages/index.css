@@ -398,9 +398,11 @@ body {
 
 .statistics__table {
     width: 100%;
-    margin: 20px 0; 
+    margin: 20px auto; 
     border-collapse: collapse;
     font-family: var(--ermilov-bold);
+    display: block;
+    overflow-x: auto;
 }
 
 .statistics__table thead {
@@ -806,6 +808,14 @@ footer {
     .play-off__item,.play-off__head {
         max-width: 237px;
         width: 100%;
+    }
+
+    .statistics__table thead tr td {
+        padding: 14px;
+    }
+
+    .statistics__table tbody tr td {
+        padding: 5px;
     }
 }
 
