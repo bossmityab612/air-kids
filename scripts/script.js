@@ -54,15 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---------- Кнопка развертывания таблицы
 
-$('.tariffs__buttom-show-all').click(function() {
+$('.statistics__button-show-all').click(function() {
   if ($(this).hasClass('active')) {
-    $(this).closest('.tariffs__block').find('.tariffs__block-show-all').slideUp(300);
+    $(this).closest('.statistics__table').find('.statistics__block-show-all').slideUp(300);
     $(this).removeClass('active')
   } else {
-    $('.tariffs__buttom-show-all').closest('.tariffs__block').find('.tariffs__block-show-all').slideUp(300);
-    $('.tariffs__buttom-show-all').removeClass('active')
+    $('.statistics__button-show-all').closest('.statistics__table').find('.statistics__block-show-all').slideUp(600);
+    $('.statistics__button-show-all').removeClass('active')
 
-    $(this).closest('.tariffs__block').find('.tariffs__block-show-all').slideDown(300);
+    $(this).closest('.statistics__table').find('.statistics__block-show-all').slideDown(300);
     $(this).addClass('active')
   }
 });
