@@ -37,7 +37,8 @@ const matchesSwiper = new Swiper('.matches-swiper', {
 
 // ------ /Слайдер для расписания матчей
 
-// Бургер
+
+// -------- Бургер
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
@@ -48,3 +49,22 @@ document.addEventListener('DOMContentLoaded', () => {
     navigationList.style.display = navigationList.style.display === 'none' ? 'block' : 'none';
   });
 });
+// ------- /Бургер
+
+
+// ---------- Кнопка развертывания таблицы
+
+$('.tariffs__buttom-show-all').click(function() {
+  if ($(this).hasClass('active')) {
+    $(this).closest('.tariffs__block').find('.tariffs__block-show-all').slideUp(300);
+    $(this).removeClass('active')
+  } else {
+    $('.tariffs__buttom-show-all').closest('.tariffs__block').find('.tariffs__block-show-all').slideUp(300);
+    $('.tariffs__buttom-show-all').removeClass('active')
+
+    $(this).closest('.tariffs__block').find('.tariffs__block-show-all').slideDown(300);
+    $(this).addClass('active')
+  }
+});
+
+// ---------- /Кнопка развертывания таблицы
