@@ -20,3 +20,11 @@
     min-height: 416px;
     margin-bottom: 182px;
 }
+
+.calendar__table tbody .calendar__table_table-row:nth-child(odd) {
+    background-color: transparent;
+}
+
+.calendar__table_table-row {
+    border: 1px solid red;
+}

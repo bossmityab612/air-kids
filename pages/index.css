@@ -448,16 +448,16 @@ body {
     background-color: #0FD400;
 }
 
-.statistics__table tbody tr td:nth-child(2) {
+.statistics__table tbody .statistics__table_table-row td:nth-child(2) {
     text-align: left;
     padding: 20px 0;
 }
 
-.statistics__table tbody tr:nth-child(odd) {
+.statistics__table tbody .statistics__table_table-row:nth-child(odd) {
     background-color: #FFAD3280;
 }
 
-.statistics__table tbody tr:nth-child(even) {
+.statistics__table tbody .statistics__table_table-row:nth-child(even) {
     background-color: #F7F8FF;
 }
 
