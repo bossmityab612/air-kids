@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function() {
   const button = document.querySelector('.statistics__button-show-all');
-  const tbody = document.querySelector('tbody');
+  const table = document.querySelector('.statistics__table');
 
   button.addEventListener('click', function() {
-      tbody.classList.toggle('show-all');
+    table.classList.toggle('.statistics__block-show-all');
       
       // Обновляем текст кнопки
       const buttonText = button.querySelector('p');
@@ -72,21 +72,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
   
 
-$('.statistics__button-show-all').click(function() {
-  var $button = $(this);
-  var $table = $button.closest('.statistics__table');
-  var $showAllBlock = $table.find('.statistics__block-show-all');
+// $('.statistics__button-show-all').click(function() {
+//   var $button = $(this);
+//   var $table = $button.closest('.statistics__table');
+//   var $showAllBlock = $table.find('.statistics__block-show-all');
 
-  if ($button.hasClass('active')) {
-    $showAllBlock.slideUp(300);
-    $button.removeClass('active');
-  } else {
-    $('.statistics__button-show-all.active').removeClass('active');
+//   if ($button.hasClass('active')) {
+//     $showAllBlock.slideUp(300);
+//     $button.removeClass('active');
+//   } else {
+//     $('.statistics__button-show-all.active').removeClass('active');
     
-    $showAllBlock.slideDown(300);
-    $button.addClass('active');
-  }
-});
+//     $showAllBlock.slideDown(300);
+//     $button.addClass('active');
+//   }
+// });
 
 
 
