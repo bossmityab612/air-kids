@@ -410,12 +410,12 @@ body {
     overflow-x: auto;
 }
 
-.statistics__table thead {
+.statistics__table_table-head {
     background-color: #6D1AD7;
     color: #fff;
 }
 
-.statistics__table thead tr td {
+.statistics__table_table-head tr td {
     padding: 20px;
     text-align: center;
 }
@@ -448,12 +448,12 @@ body {
     background-color: #0FD400;
 }
 
-.statistics__table tbody .statistics__table_table-row td:nth-child(2) {
+.statistics__table_table-row td:nth-child(2) {
     text-align: left;
     padding: 20px 0;
 }
 
-.statistics__table tbody .statistics__table_table-row:nth-child(odd) {
+.statistics__table_table-row:nth-child(odd) {
     background-color: #FFAD3280;
 }
 
@@ -711,8 +711,6 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
-
 
 /* ----- Блок СЕРЫЙ БЛОК-2 ----- */
 
