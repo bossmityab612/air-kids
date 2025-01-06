@@ -19,6 +19,7 @@
     width: 100%;
     min-height: 416px;
     margin-bottom: 182px;
+    border: 1px solid #000;
 }
 
 .calendar__table tbody .calendar__table_table-row:nth-child(odd) {
