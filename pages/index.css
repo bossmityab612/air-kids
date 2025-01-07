@@ -420,7 +420,7 @@ body {
     text-align: center;
 }
 
-.statistics__table tbody tr td {
+.statistics__table_table-row {
     padding: 20px;
     text-align: center;
 }

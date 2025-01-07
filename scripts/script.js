@@ -54,41 +54,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---------- Кнопка развертывания таблицы
 
-document.addEventListener('DOMContentLoaded', function() {
+function toggleShowAll() {
   const button = document.querySelector('.statistics__button-show-all');
-  const table = document.querySelector('.statistics__table');
-
-  button.addEventListener('click', function() {
-    table.classList.toggle('.statistics__block-show-all');
-      
-      // Обновляем текст кнопки
-      const buttonText = button.querySelector('p');
-      buttonText.textContent = buttonText.textContent === 'Результаты матчей' ? 'Скрыть результаты' : 'Результаты матчей';
-      
-      // Изменяем изображение стрелки
-      const arrowImage = button.querySelector('img');
-      arrowImage.src = arrowImage.src.includes('vector-down.svg') ? './images/vector-up.svg' : './images/vector-down.svg';
-  });
-});
+  const tbody = document.querySelector('tbody');
   
+  button.classList.toggle('active');
+  
+  if (button.classList.contains('active')) {
+    tbody.querySelectorAll('.statistics__block-show-all').forEach(row => {
+      row.style.display = '';
+    });
+  } else {
+    tbody.querySelectorAll('.statistics__block-show-all').forEach(row => {
+      row.style.display = 'none';
+    });
+  }
+}
 
-// $('.statistics__button-show-all').click(function() {
-//   var $button = $(this);
-//   var $table = $button.closest('.statistics__table');
-//   var $showAllBlock = $table.find('.statistics__block-show-all');
+document.querySelector('.statistics__button-show-all').addEventListener('click', toggleShowAll);
 
-//   if ($button.hasClass('active')) {
-//     $showAllBlock.slideUp(300);
-//     $button.removeClass('active');
-//   } else {
-//     $('.statistics__button-show-all.active').removeClass('active');
-    
-//     $showAllBlock.slideDown(300);
-//     $button.addClass('active');
-//   }
+// Функция для переключения отображения всех строк
+function toggleShowAll() {
+  const button = document.querySelector('.statistics__button-show-all');
+  const tbody = document.querySelector('tbody');
+  
+  button.classList.toggle('active');
+  
+  if (button.classList.contains('active')) {
+    tbody.querySelectorAll('.statistics__block-show-all').forEach(row => {
+      row.style.display = '';
+    });
+  } else {
+    tbody.querySelectorAll('.statistics__block-show-all').forEach(row => {
+      row.style.display = 'none';
+    });
+  }
+}
+
+// Привязываем функцию к клику по кнопке
+document.querySelector('.statistics__button-show-all').addEventListener('click', toggleShowAll);
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const button = document.querySelector('.statistics__button-show-all');
+//   const table = document.querySelector('.statistics__table');
+
+//   button.addEventListener('click', function() {
+//     table.classList.toggle('.statistics__block-show-all');
+      
+//       // Обновляем текст кнопки
+//       const buttonText = button.querySelector('p');
+//       buttonText.textContent = buttonText.textContent === 'Результаты матчей' ? 'Скрыть результаты' : 'Результаты матчей';
+      
+//       // Изменяем изображение стрелки
+//       const arrowImage = button.querySelector('img');
+//       arrowImage.src = arrowImage.src.includes('vector-down.svg') ? './images/vector-up.svg' : './images/vector-down.svg';
+//   });
 // });
-
-
 
 // $('.statistics__button-show-all').click(function() {
 //   if ($(this).hasClass('active')) {

@@ -18,17 +18,46 @@
     max-width: 962px;
     width: 100%;
     min-height: 416px;
-    margin-bottom: 182px;
-    border: 1px solid #000;
-    /* border-collapse: collapse; */ 
+    height: 100%;
     display: table;
 }
 
 .calendar__table-head {
-    border: 1px solid red;
+    font-size: 20px;
 }
 
-.calendar__table_table-row td {
-    border: 1px solid green;
+.calendar__table_table-cell-head {
+    padding: 10px 10px 10px 5px;
+    color: #909090;
+}
 
+.calendar__table_table-row-body-block {
+    width: 100%;
+    min-height: 416px;
+}
+
+.calendar__table_table-cell-body {
+    background-color: #6D1AD7;
+    color: #fff;
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    padding: 10px 0 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* .calendar__table_table-cell-body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: #000;
+    display: none;
+} */
+
+.calendar__table_table-cell-body:hover {
+    background-color: #5511AB;
 }
