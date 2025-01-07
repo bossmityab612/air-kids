@@ -54,46 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---------- Кнопка развертывания таблицы
 
-function toggleShowAll() {
-  const button = document.querySelector('.statistics__button-show-all');
-  const tbody = document.querySelector('tbody');
-  
-  button.classList.toggle('active');
-  
-  if (button.classList.contains('active')) {
-    tbody.querySelectorAll('.statistics__block-show-all').forEach(row => {
-      row.style.display = '';
-    });
-  } else {
-    tbody.querySelectorAll('.statistics__block-show-all').forEach(row => {
-      row.style.display = 'none';
-    });
-  }
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const showAllButton = document.querySelector('.statistics__button-show-all');
+  const showAllList = document.querySelector('.statistics__block-show-all');
 
-document.querySelector('.statistics__button-show-all').addEventListener('click', toggleShowAll);
-
-// Функция для переключения отображения всех строк
-function toggleShowAll() {
-  const button = document.querySelector('.statistics__button-show-all');
-  const tbody = document.querySelector('tbody');
-  
-  button.classList.toggle('active');
-  
-  if (button.classList.contains('active')) {
-    tbody.querySelectorAll('.statistics__block-show-all').forEach(row => {
-      row.style.display = '';
-    });
-  } else {
-    tbody.querySelectorAll('.statistics__block-show-all').forEach(row => {
-      row.style.display = 'none';
-    });
-  }
-}
-
-// Привязываем функцию к клику по кнопке
-document.querySelector('.statistics__button-show-all').addEventListener('click', toggleShowAll);
-
+  showAllButton.addEventListener('click', () => {
+    showAllButton.classList.toggle('active');
+    showAllList.style.display = showAllList.style.display === 'none' ? 'table' : 'none';
+  });
+});
 
 // document.addEventListener('DOMContentLoaded', function() {
 //   const button = document.querySelector('.statistics__button-show-all');
