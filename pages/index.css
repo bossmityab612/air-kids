@@ -407,7 +407,11 @@ body {
   border-collapse: collapse;
   font-family: var(--ermilov-bold);
   display: table;
+}
+
+.statistics__table-block {
   overflow-x: auto;
+  margin: 20px auto; 
 }
 
 .statistics__table thead {
