@@ -39,10 +39,10 @@
    <main class="content">
 
       <!-- -------Секция со слайдером краткого расписания матчей------ -->
-      <section class="matches">
-         <div class="matches-swiper">
-             <ul class="matches__cards-block swiper-wrapper">
-                 <li class="matches__card-item swiper-slide">
+        <section class="matches">
+            <div class="matches-swiper">
+                <ul class="matches__cards-block swiper-wrapper">
+                    <li class="matches__card-item swiper-slide">
                      <div class="matches__card-item-title">12.05 / 19:30 МСК</div>
                      <div class="matches__card-item-body">
                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="38" viewBox="0 0 33 38" fill="none">
@@ -67,8 +67,8 @@
                              <path d="M9.84756 0.779785C10.5585 0.779785 11.1601 1.38135 11.1601 2.09229V9.99463C11.1601 10.7056 10.5585 11.2798 9.84756 11.2798H1.94521C1.23428 11.2798 0.660058 10.7056 0.660058 9.99463V2.09229C0.660058 1.38135 1.23428 0.779785 1.94521 0.779785H9.84756ZM15.0155 1.81885C15.5897 1.43604 16.4101 1.84619 16.4101 2.52979V9.55713C16.4101 10.2407 15.5897 10.6509 15.0155 10.2681L12.0351 8.18994V3.89697L15.0155 1.81885Z" fill="#484848" />
                          </svg>
                      </div>
-                 </li>
-                 <li class="matches__card-item swiper-slide">
+                    </li>
+                    <li class="matches__card-item swiper-slide">
                      <div class="matches__card-item-title">12.05 / 19:30 МСК</div>
                      <div class="matches__card-item-body">
                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="38" viewBox="0 0 33 38" fill="none">
@@ -210,71 +210,81 @@
 
     <section class="container registration"></section>
 
+    <!-- ---------- Календарь ТАБЛИЦА --------- -->
+
     <section class="container calendar">
       <h2>Календарь</h2>
-      <div class="container statistics__table calendar__table">
-        <table class="calendar__table">
-          <thead class="calendar__table-head" >
-            <tr class="calendar__table_table-row">
-              <td class="calendar__table_table-cell-head">ПН</td>
-              <td class="calendar__table_table-cell-head">ВТ</td>
-              <td class="calendar__table_table-cell-head">СР</td>
-              <td class="calendar__table_table-cell-head">ЧТ</td>
-              <td class="calendar__table_table-cell-head">ПТ</td>
-              <td class="calendar__table_table-cell-head">СБ</td>
-              <td class="calendar__table_table-cell-head">ВС</td>
-            </tr>
-          </thead>
-          <tbody class="calendar__table_table-row-body-block">
-            <tr class="calendar__table_table-row">
-              <td class="calendar__table_table-cell-body">1</td>
-              <td class="calendar__table_table-cell-body">2</td>
-              <td class="calendar__table_table-cell-body">3</td>
-              <td class="calendar__table_table-cell-body">4</td>
-              <td class="calendar__table_table-cell-body">5</td>
-              <td class="calendar__table_table-cell-body">6</td>
-              <td class="calendar__table_table-cell-body">7</td>
-            </tr>
-            <tr class="calendar__table_table-row">
-              <td class="calendar__table_table-cell-body">8</td>
-              <td class="calendar__table_table-cell-body">9</td>
-              <td class="calendar__table_table-cell-body">10</td>
-              <td class="calendar__table_table-cell-body">11</td>
-              <td class="calendar__table_table-cell-body">12</td>
-              <td class="calendar__table_table-cell-body">13</td>
-              <td class="calendar__table_table-cell-body">14</td>
-            </tr>
-            <tr class="calendar__table_table-row">
-              <td class="calendar__table_table-cell-body">15</td>
-              <td class="calendar__table_table-cell-body">16</td>
-              <td class="calendar__table_table-cell-body">17</td>
-              <td class="calendar__table_table-cell-body">18</td>
-              <td class="calendar__table_table-cell-body">19</td>
-              <td class="calendar__table_table-cell-body">20</td>
-              <td class="calendar__table_table-cell-body">21</td>
-            </tr>
-            <tr class="calendar__table_table-row">
-              <td class="calendar__table_table-cell-body">22</td>
-              <td class="calendar__table_table-cell-body">23</td>
-              <td class="calendar__table_table-cell-body">24</td>
-              <td class="calendar__table_table-cell-body">25</td>
-              <td class="calendar__table_table-cell-body">26</td>
-              <td class="calendar__table_table-cell-body">27</td>
-              <td class="calendar__table_table-cell-body">28</td>
-            </tr>
-            <tr class="calendar__table_table-row">
-              <td class="calendar__table_table-cell-body">29</td>
-              <td class="calendar__table_table-cell-body">30</td>
-              <td class="calendar__table_table-cell-body">31</td>
-              <td class="calendar__table_table-cell-body">1</td>
-              <td class="calendar__table_table-cell-body">2</td>
-              <td class="calendar__table_table-cell-body">3</td>
-              <td class="calendar__table_table-cell-body">4</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
+      <select name="month" id="calendar__month">
+        <option value="Месяц">Январь</option>
+        <option value="Месяц">Февраль</option>
+        <option value="Месяц">Март</option>
+      </select>
+      
+      <table class="calendar__table">
+        <thead>
+          <tr>
+            <td>ПН</td>
+            <td>ВТ</td>
+            <td>СР</td>
+            <td>ЧТ</td>
+            <td>ПТ</td>
+            <td>СБ</td>
+            <td>ВС</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
+
+    <!-- ---------- /Календарь ТАБЛИЦА --------- -->
+
 
     <section class="grey-block-2"></section>
    </main>

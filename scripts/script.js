@@ -75,6 +75,24 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-
 // ---------- /Кнопка развертывания таблицы
 
+// ------- Кнопка изменения цвета в календаре
+
+document.addEventListener('DOMContentLoaded', function() {
+  const calendarTable = document.querySelector('.calendar__table tbody tr');
+  
+  calendarTable.addEventListener('click', function(event) {
+    const target = event.target;
+    
+    // Проверяем, является ли цель элементом <td>
+    if (target.tagName === 'TD') {
+      // Добавляем или удаляем класс 'active'
+      target.classList.toggle('active');
+    }
+  });
+
+});
+
+
+// ------- /Кнопка изменения цвета в календаре
