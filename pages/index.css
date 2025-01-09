@@ -15,985 +15,996 @@
 
 
 *{
-    /* outline: 1px solid green; */
-    box-sizing: border-box;
+  /* outline: 1px solid green; */
+  box-sizing: border-box;
 }
 
 :root {
-    --ermilov-bold: 'Ermilov-Bold', Arial, Helvetica, sans-serif;
-    --rubick: 'Rubik' , Arial, Helvetica, sans-serif;
+  --ermilov-bold: 'Ermilov-Bold', Arial, Helvetica, sans-serif;
+  --rubick: 'Rubik' , Arial, Helvetica, sans-serif;
 }
 
 body {
-    width: 100%;
-    max-width: 1903px;
-    margin: 0 auto;
-    position: relative;
-    /* font-family: sans-serif; */
-    font-family: var(--rubick);
-    background-color: #F2F2F2;
+  width: 100%;
+  max-width: 1903px;
+  margin: 0 auto;
+  position: relative;
+  /* font-family: sans-serif; */
+  font-family: var(--rubick);
+  background-color: #F2F2F2;
 }   
 
 .container {
-    max-width: 1140px;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: 0 auto;
-    padding: 10px;
+  max-width: 1140px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .content {
-    background-color: #F2F2F2;
+  background-color: #F2F2F2;
 }
 
 /* ------ Шапка сайта ------- */
 .header {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 100%;
-    max-height: 81px;
-    background-color: #6D1AD7;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  max-height: 81px;
+  background-color: #6D1AD7;
+  position: relative;
 }
 
 .header__block {
-    display: flex;
-    gap: 20px;
-    max-width: 1257px;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    margin: auto 0;
+  display: flex;
+  gap: 20px;
+  max-width: 1257px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin: auto 0;
 }
 
 .header__logo-link {
-    max-width: 109px;
-    width: 100%;
-    min-height: 81px;
-    margin: 0;
-    padding: 0;
-    background-image: url('../images/Logo.svg');
-    object-fit: contain;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+  max-width: 109px;
+  width: 100%;
+  min-height: 81px;
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/Logo.svg');
+  object-fit: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .header__navigation-list li {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .header__navigation-list a {
-    text-decoration: none;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    width: fit-content;
-    align-items: center;
-    flex-shrink: 0;
+  text-decoration: none;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .header__navigation-list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: space-between;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .header__navigation-list-item {
-    margin: 0;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__navigation-list-item:hover {
-    background-color: #FFAD32;
-    transition: all 0.3s ease-out;
+  background-color: #FFAD32;
+  transition: all 0.3s ease-out;
 }
 
 .header__navigation-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .burger {
-    display: none;
+  display: none;
 }
 
 /* ------ Блок ИНТРО --------- */
 .intro {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    overflow: hidden; 
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden; 
 }
 
 .intro__image {
-    position: relative;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    color: #fff;
-    justify-content: space-between;
-    width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .intro__image img {
-    object-fit: cover;
-    max-width: 1904px;
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-position: 50% 55%;
-    display: flex;
+  object-fit: cover;
+  max-width: 1904px;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-position: 50% 55%;
+  display: flex;
 }
 
 .swiper-horizontal.intro  {
-    padding: 0;
+  padding: 0;
 }
 
 .intro__button-left {
-    background-image: url('../images/vector-left-intro.svg');
-    width: 25px;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    object-fit: contain;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    z-index: 2;
+  background-image: url('../images/vector-left-intro.svg');
+  width: 25px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  object-fit: contain;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  z-index: 2;
 }
 
 .intro__button-right {
-    background-image: url('../images/vector-right-intro.svg');
-    width: 25px;
-    height: 50px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    z-index: 2;
+  background-image: url('../images/vector-right-intro.svg');
+  width: 25px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: 2;
 }
 
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
-    content: '';
-    opacity: 0;
+  content: '';
+  opacity: 0;
 }
 
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    content: '';
-    opacity: 0;
+  content: '';
+  opacity: 0;
 } 
 
 /* ---- Блок МАТЧИ расписание ----- */
 .matches-swiper {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 1170px;
-    width: 100%;
-    margin: 20px auto 0;
-    justify-content: space-between;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1170px;
+  width: 100%;
+  margin: 20px auto 0;
+  justify-content: space-between;
 }
 
 .swiper-horizontal {
-    padding: 16px;
+  padding: 16px;
 }
 
 .matches {
-    position: relative;
-    display: flex;
-    margin: 0 auto;
-    max-width: 1270px;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1270px;
 }
 
 .matches__button img {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .matches__button-prev {
-    margin-right: 20px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    background-color: transparent;
-    z-index: 2;
+  margin-right: 20px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: transparent;
+  z-index: 2;
 }
 
 .matches__button-next {
-    margin-left: 20px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    background-color: transparent;
-    z-index: 2;
+  margin-left: 20px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: transparent;
+  z-index: 2;
 }
 
 .matches__cards-block {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 1170px;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1170px;
+  width: 100%;
 }
 
 .matches__card-item.swiper-slide {
-    border-radius: 3px;
-    width: 100%;
-    min-height: 192px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #fff;
-    box-shadow: 0px 0px 15px 5px #CCCCCC;
+  border-radius: 3px;
+  width: 100%;
+  min-height: 192px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 5px #CCCCCC;
 }
 
 .matches__card-item-title {
-    background-color: #C7C7C7;
-    min-height: 35px;
-    text-align: center;
-    width: 100%;
-    border-radius: 3px 3px 0 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background-color: #C7C7C7;
+  min-height: 35px;
+  text-align: center;
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .matches__card-item-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .matches__card-item-footer {
-    background-color: #C7C7C7;
-    border-radius: 0 0 3px 3px;
-    min-height: 35px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  background-color: #C7C7C7;
+  border-radius: 0 0 3px 3px;
+  min-height: 35px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .matches__card-item-footer svg {
-    margin-right: 17px;
+  margin-right: 17px;
 }
 
 .matches__card-item-footer svg:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 /* ---- Блок РЕГИСТРАЦИЯ ----- */
 
 .registration {
-    background-image: url('../images/reg-image.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 100%;
-    margin: 25px auto;
-    min-height: 142px;
+  background-image: url('../images/reg-image.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  margin: 25px auto;
+  min-height: 142px;
 }
 
 /* ----- Блок НОВОСТИ ----- */
 
 .news {
-    margin: 10px auto 88px;
+  margin: 10px auto 88px;
 }
 
 .news__cards-block {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .news__cards-item {
-    border-radius: 30px;
-    max-width: 360px;
-    width: 100%;
-    min-height: 414px;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
+  border-radius: 30px;
+  max-width: 360px;
+  width: 100%;
+  min-height: 414px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 
 .news__cards-item:hover {
-    background-color: #6D1AD7;
-    color: #fff;
+  background-color: #6D1AD7;
+  color: #fff;
 }
 
 .news__cards-item img {
-    border-radius: 30px 30px 0 0;
-    width: 100%;
+  border-radius: 30px 30px 0 0;
+  width: 100%;
 }
 
 .news__cards-item p {
-    text-align: right;
-    margin: 7px 6px 0 0;
+  text-align: right;
+  margin: 7px 6px 0 0;
 }
 
 .news-cards-text {
-    padding: 6px;
+  padding: 6px;
 }
 
 .news-cards-text h3 {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .news-cards-text p:nth-child(2) {
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 18px;
-    text-align: left;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: left;
 }
 
 
 /* ----- Блок с ТАБЛИЦЕЙ ----- */
 .table-image {
-    margin: 0 auto;
-    width: 100%;
-    min-height: 566px;
-    object-fit: contain;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 566px;
+  object-fit: contain;
 }
 
 /* ----- Блок СЕРЫЙ БЛОК-1 ----- */
 
 .grey-block {
-    width: 100%;
-    background-color: #909090;
+  width: 100%;
+  background-color: #909090;
 }
 
 /* ----- Блок СЕРЫЙ БЛОК-1 ----- */
 .grey-block-1 {
-    margin: 40px auto;
-    width: 100%;
-    min-height: 143px;
+  margin: 40px auto;
+  width: 100%;
+  min-height: 143px;
 }
 
 /* ----- Блок РАСПИСАНИЕ ----- */
 
 /* ---------- Таблица с расписанием матчей -------- */
 .statistics__table {
-    width: 100%;
-    margin: 20px auto; 
-    border-collapse: collapse;
-    font-family: var(--ermilov-bold);
-    display: table;
-    overflow-x: auto;
+  width: 100%;
+  margin: 20px auto; 
+  border-collapse: collapse;
+  font-family: var(--ermilov-bold);
+  display: table;
+  overflow-x: auto;
 }
 
-.statistics__table_table-head {
-    background-color: #6D1AD7;
-    color: #fff;
+.statistics__table thead {
+  background-color: #6D1AD7;
+  color: #fff;
 }
 
-.statistics__table_table-head tr td {
-    padding: 20px;
-    text-align: center;
+.statistics__table thead tr td {
+  padding: 20px;
+  text-align: center;
 }
 
-.statistics__table_table-row {
-    padding: 20px;
-    text-align: center;
+.statistics__table tbody tr td {
+  padding: 20px;
+  text-align: center;
 }
 
 .statistics__table tbody tr td div {
-    display: flex;
-    gap: 13px;
+  display: flex;
+  gap: 13px;
 }
 
 .statistics__table tbody tr td ul {
-    display: flex;
-    flex-direction: row;
-    gap: 6px;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: center;
 }
 
 .statistics__table tbody tr td ul li span {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    display: block;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #0FD400;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #0FD400;
 }
 
-.statistics__table_table-row td:nth-child(2) {
-    text-align: left;
-    padding: 20px 0;
+.statistics__table tbody .statistics__table_table-row td:nth-child(2) {
+  text-align: left;
+  padding: 20px 0;
 }
 
-.statistics__table_table-row:nth-child(odd) {
-    background-color: #FFAD3280;
+.statistics__table tbody .statistics__table_table-row:nth-child(odd) {
+  background-color: #FFAD3280;
 }
 
 .statistics__table tbody .statistics__table_table-row:nth-child(even) {
-    background-color: #F7F8FF;
+  background-color: #F7F8FF;
 }
 
 .statistics__block-show-all {
-    display: none;
-    border: 1px solid #000;
+  display: none;
+  transition: opacity 300ms ease-in-out;
+}
+
+.statistics__block-show-all.active {
+  display: table;
 }
 
 .statistics__button-show-all {
-    margin: 0 auto;
-    max-width: 180px;
-    width: 100%;
-    min-height: 32px;
-    border-radius: 5px;
-    background-color: #6D1AD7;
-    color: #fff;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
+  margin: 0 auto;
+  max-width: 180px;
+  width: 100%;
+  min-height: 32px;
+  border-radius: 5px;
+  background-color: #6D1AD7;
+  color: #fff;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.statistics__button-show-all:hover {
+  background-color: #FFAD32;
+  transition: all 0.3s ease-out;
 }
 
 /* ---------- /Таблица с расписанием матчей -------- */
 
 
 .schedule {
-    box-shadow: 0px 0px 15px 5px #CCCCCC;
-    padding: 20px;
-    margin-bottom: 62px;
-    background-color: #fff;
+  box-shadow: 0px 0px 15px 5px #CCCCCC;
+  padding: 20px;
+  margin-bottom: 62px;
+  background-color: #fff;
 }
 
 .schedule__seasons {
-    margin: 0 auto 37px;
-    display: flex;
-    flex-direction: row;
-    gap: 23px;
+  margin: 0 auto 37px;
+  display: flex;
+  flex-direction: row;
+  gap: 23px;
 }
 
 .schedule__title {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
 }
 
 .play-off {
-    display: flex;
-    gap: 50px;
-    margin-bottom: 35px;
+  display: flex;
+  gap: 50px;
+  margin-bottom: 35px;
 }
 
 .play-off__main {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .play-off__title {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 26px;
-    text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
 }
 
 .play-off__header {
-    display: flex;
-    gap: 50px;
-    margin-bottom: 65px;
+  display: flex;
+  gap: 50px;
+  margin-bottom: 65px;
 }
 .play-off__head {
-    text-align: center;
-    background: #ffad32;
-    color: #fff;
-    line-height: 25px;
-    border: 1px solid #e1e1e1;
+  text-align: center;
+  background: #ffad32;
+  color: #fff;
+  line-height: 25px;
+  border: 1px solid #e1e1e1;
 }
 
 .play-off__step {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 .play-off__column {
-    gap: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  gap: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .play-off__column:first-child {
-    gap: 20px;
+  gap: 20px;
 }
 
 .play-off__item,
 .play-off__head {
-    width: 237px;
+  width: 237px;
 }
 
 .play-off__caption {
-    font-size: 10px;
-    padding: 5px 0;
-    color: #a4a4a4;
+  font-size: 10px;
+  padding: 5px 0;
+  color: #a4a4a4;
 }
 
 .play-off__team {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid #000;
-    font-weight: 800;
-    font-size: 12px;
-    line-height: 25px;
-    padding: 0 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 25px;
+  padding: 0 4px;
 }
 .play-off__team_winner {
-    background-color: #6d1ad74d;
+  background-color: #6d1ad74d;
 }
 .play-off__team:last-of-type {
-    border-top: none;
+  border-top: none;
 }
 .play-off__team p {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
 }
 
 .play-off__item_thirdplace {
-    border: 1px solid #e1e1e1;
-    margin-left: auto;
+  border: 1px solid #e1e1e1;
+  margin-left: auto;
 }
 
 .play-off__item_thirdplace .play-off__item-header {
-    background: #edeff9;
-    font-size: 12px;
-    text-transform: uppercase;
-    padding: 5px;
-    text-wrap: 600;
-    text-align: center;
+  background: #edeff9;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px;
+  text-wrap: 600;
+  text-align: center;
 }
 .play-off__item_thirdplace .play-off__team {
-    border: none;
-    border-top: 1px solid #e1e1e1;
+  border: none;
+  border-top: 1px solid #e1e1e1;
 }
 .play-off__item_thirdplace .play-off__caption {
-    padding-left: 12px;
+  padding-left: 12px;
 }
 
 /* ---- ТАБЛИЦА МАТЧЕЙ ---- */
 
 .schedule_schedule-table {
-    margin: 30px 0;
-    max-width: 1106px;
-    width: 100%;
-    min-height: 407px;
-    border: none;
-    border-spacing: 0;
+  margin: 30px 0;
+  max-width: 1106px;
+  width: 100%;
+  min-height: 407px;
+  border: none;
+  border-spacing: 0;
 }
 
 .schedule_schedule-table td tr {
-    text-align: center;
+  text-align: center;
 }
 
 .schedule_schedule-table td {
-    min-width: 96px;
-    max-width: 283px;
-    text-align: center;
-    border: 1px solid #000;
+  min-width: 96px;
+  max-width: 283px;
+  text-align: center;
+  border: 1px solid #000;
 }
 
 .schedule_schedule-table tr:first-child {
-    background-color: #6D1AD7;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  background-color: #6D1AD7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .schedule_schedule-table tr {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #000;
 }
 
 .schedule_schedule-table-A {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
 .schedule_schedule-table-A tr {
-    display: flex;
-    min-height: 57px;
-    align-items: center;
-    flex-direction: row;
+  display: flex;
+  min-height: 57px;
+  align-items: center;
+  flex-direction: row;
 }
 
 .schedule_schedule-table-A td {
-    width: 100%;
+  width: 100%;
 }
 
 /* ------- Блок ГАЛЕРЕЯ ------ */
 
 .photo-galery {
-    display: grid;
-    grid-template-columns: minmax(auto, auto);
-    grid-template-rows: minmax(auto, auto);
-    gap: 4px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "area1 area2 area2"
-        "area3 area3 area4"
-        "area5 area5 area6"
-        "area7 area7 area8";
+  display: grid;
+  grid-template-columns: minmax(auto, auto);
+  grid-template-rows: minmax(auto, auto);
+  gap: 4px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "area1 area2 area2"
+    "area3 area3 area4"
+    "area5 area5 area6"
+    "area7 area7 area8";
 }
-    
+  
 .area1 {
-    grid-area: area1;
+  grid-area: area1;
 }
 
 .area2 {
-    grid-area: area2;
+  grid-area: area2;
 }
 
 .area3 {
-    grid-area: area3;
+  grid-area: area3;
 }
 
 .area4 {
-    grid-area: area4;
+  grid-area: area4;
 }
 
 .area5 {
-    grid-area: area5;
+  grid-area: area5;
 }
 
 .area6 {
-    grid-area: area6;
+  grid-area: area6;
 }
 
 .area7 {
-    grid-area: area7;
+  grid-area: area7;
 }
 
 .area8 {
-    grid-area: area8;
+  grid-area: area8;
 }
 
 .photo-galery-image-item {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+
 
 /* ----- Блок СЕРЫЙ БЛОК-2 ----- */
 
 .grey-block-2 {
-    margin: 40px auto 0;
-    width: 100%;
-    min-height: 100px;
-    min-height: 424px;
-    background-color: #909090;
+  margin: 40px auto 0;
+  width: 100%;
+  min-height: 100px;
+  min-height: 424px;
+  background-color: #909090;
 }
 
 /*-----------------------------*/
 
 footer {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0;
-    background-image: url('../images/footer-bg-image.png');
-    background-repeat: no-repeat;
-    object-fit: contain;
-    min-height: 275px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+  background-image: url('../images/footer-bg-image.png');
+  background-repeat: no-repeat;
+  object-fit: contain;
+  min-height: 275px;
 }
 
 .footer__block {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    max-width: 1114px;
-    width: 100%;
-    min-height: 186px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  max-width: 1114px;
+  width: 100%;
+  min-height: 186px;
 }
 
 .footer__block img {
-    margin-right: 110px;
+  margin-right: 110px;
 }
 
 .footer__links-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 835px;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 835px;
+  width: 100%;
 }
 
 .footer__links-block-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    max-width: 235px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 235px;
+  width: 100%;
 }
 
 .footer__links-block-item li {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .footer__links-block-item a {
-    margin: 0;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: fit-content;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
+  margin: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* ----- Медиа-запросы ---- */
 
 @media screen and (max-width: 1140px) {
-    .news__cards-block {
-        gap: 12px;
-        padding: 0 12px;
-    }
+  .news__cards-block {
+    gap: 12px;
+    padding: 0 12px;
+  }
 }
 
 
 @media screen and (max-width: 1024px) {
-    .grey-block-2 {
-        min-height: 225px;
-    }
+  .grey-block-2 {
+    min-height: 225px;
+  }
 }
 
 @media screen and (max-width: 956px) {
-    .header__navigation-list {
-        font-size: 14px;
-    }
+  .header__navigation-list {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 975px) {
-    .play-off {
-        max-width: 950px;
-        width: 100%;
-        flex-direction: column;
-    }
+  .play-off {
+    max-width: 950px;
+    width: 100%;
+    flex-direction: column;
+  }
 
-    .play-off__header {
-        gap: 30px;
-    }
+  .play-off__header {
+    gap: 30px;
+  }
 
-    .play-off__step {
-        gap: 30px;
-    
-    }
-    .play-off__item,.play-off__head {
-        max-width: 237px;
-        width: 100%;
-    }
+  .play-off__step {
+    gap: 30px;
+  
+  }
+  .play-off__item,.play-off__head {
+    max-width: 237px;
+    width: 100%;
+  }
 
-    .statistics__table thead tr td {
-        padding: 14px;
-    }
+  .statistics__table thead tr td {
+    padding: 14px;
+  }
 
-    .statistics__table tbody tr td {
-        padding: 5px;
-    }
+  .statistics__table tbody tr td {
+    padding: 5px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .header {
-        flex-direction: row;
-        padding: 0;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }
+  .header {
+    flex-direction: row;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
 
-    .header__block {
-        display: block;
-    }
+  .header__block {
+    display: block;
+  }
 
 
-    .header__navigation-list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: fixed;
-        background-color: #fff;
-        color: #000;
-        font-size: 16px;
-        z-index: 11;
-        height: 100vh;
-    }
-    
-    .header__navigation-list {
-        display: none;
-    }
+  .header__navigation-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    z-index: 11;
+    height: 100vh;
+  }
+  
+  .header__navigation-list {
+    display: none;
+  }
 
-    .burger {
-        display: flex;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        margin-right: 20px;
-    }
+  .burger {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
 
-    .burger__block {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 3px;
-        height: 43px;
-        align-items: flex-end;
-    }
+  .burger__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    height: 43px;
+    align-items: flex-end;
+  }
 
-    .burger__lines {
-        background-color: #fff;
-        display: block;
-        width: 44px;
-        height: 7px;
-        border-radius: 21px;
-    }
+  .burger__lines {
+    background-color: #fff;
+    display: block;
+    width: 44px;
+    height: 7px;
+    border-radius: 21px;
+  }
 
-    .burger__lines:last-child {
-        width: 32px;
-    }
+  .burger__lines:last-child {
+    width: 32px;
+  }
 
-    .burger__lines.active {
-        background-color: #fff;
-    }
+  .burger__lines.active {
+    background-color: #fff;
+  }
 
-    .news__cards-block {
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
+  .news__cards-block {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 
-    .news-section__cards-block-matrix.news__cards-block {
-        grid-template-columns: 1fr 1fr;
-    }
+  .news-section__cards-block-matrix.news__cards-block {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .grey-block-1 {
-        margin: 0 auto 40px;
-    }
+  .grey-block-1 {
+    margin: 0 auto 40px;
+  }
 
-    .schedule__play-off-block {
-        flex-direction: column;
-        align-items: center;
-    }
+  .schedule__play-off-block {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .footer__links-block-item a {
-        font-size: 15px;
-    }
+  .footer__links-block-item a {
+    font-size: 15px;
+  }
 
-    .footer__block img {
-        width: 90px;
-        height: 90px;
-        margin: 0;
-    }
+  .footer__block img {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 525px) {
-    
-    header a {
-        padding: 10px 0px;
-    }
+  
+  header a {
+    padding: 10px 0px;
+  }
 
-    .play-off__head {
-        font-size: 12px;
-    }
+  .play-off__head {
+    font-size: 12px;
+  }
 
-    .play-off__header {
-        gap: 15px;
-    }
+  .play-off__header {
+    gap: 15px;
+  }
 
-    .play-off__step {
-        gap: 15px;
-    }
+  .play-off__step {
+    gap: 15px;
+  }
 
-    .play-off__team {
-        font-size: 10px;
-    }
+  .play-off__team {
+    font-size: 10px;
+  }
 
-    .play-off__team svg {
-        width: 14px;
-    }
+  .play-off__team svg {
+    width: 14px;
+  }
 
-    .grey-block-2 {
-        min-height: 160px;
-    }
+  .grey-block-2 {
+    min-height: 160px;
+  }
 
-    .footer__links-block-item a {
-        font-size: 12px;
-    }
+  .footer__links-block-item a {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 425px) {
-    .teams__logos {
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-content: center;
-    }
+  .teams__logos {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
 
-    .news-section__cards-block-matrix.news__cards-block {
-        grid-template-columns: 1fr;
-    }
+  .news-section__cards-block-matrix.news__cards-block {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 375px) {
-    .footer__links-block-item a {
-        font-size: 10px;
-    }
+  .footer__links-block-item a {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .play-off__header {
-        gap: 9px;
-    }
+  .play-off__header {
+    gap: 9px;
+  }
 
-    .play-off__team {
-        font-size: 7px;
-    }
+  .play-off__team {
+    font-size: 7px;
+  }
 
-    .play-off__step {
-        gap: 9px;
-    }
+  .play-off__step {
+    gap: 9px;
+  }
 }
 

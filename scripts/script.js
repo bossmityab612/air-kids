@@ -54,44 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---------- Кнопка развертывания таблицы
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const showAllButton = document.querySelector('.statistics__button-show-all');
-  const showAllList = document.querySelector('.statistics__block-show-all');
+  const showAllTable = document.querySelector('.statistics__table.statistics__block-show-all');
 
-  showAllButton.addEventListener('click', () => {
-    showAllButton.classList.toggle('active');
-    showAllList.style.display = showAllList.style.display === 'none' ? 'table' : 'none';
-  });
+  if (showAllButton && showAllTable) {
+    showAllButton.addEventListener('click', function() {
+      showAllTable.classList.toggle('active');
+      
+      // Обновляем текст кнопки
+      const buttonText = this.querySelector('p');
+      buttonText.textContent = buttonText.textContent === 'Результаты матчей' ? 'Скрыть результаты' : 'Результаты матчей';
+      
+      // Изменяем изображение стрелки
+      const arrowImage = this.querySelector('img');
+      arrowImage.src = arrowImage.src.includes('vector-down.svg') ? './images/vector-up.svg' : './images/vector-down.svg';
+    });
+  } else {
+    console.error('Элементы не найдены');
+  }
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   const button = document.querySelector('.statistics__button-show-all');
-//   const table = document.querySelector('.statistics__table');
-
-//   button.addEventListener('click', function() {
-//     table.classList.toggle('.statistics__block-show-all');
-      
-//       // Обновляем текст кнопки
-//       const buttonText = button.querySelector('p');
-//       buttonText.textContent = buttonText.textContent === 'Результаты матчей' ? 'Скрыть результаты' : 'Результаты матчей';
-      
-//       // Изменяем изображение стрелки
-//       const arrowImage = button.querySelector('img');
-//       arrowImage.src = arrowImage.src.includes('vector-down.svg') ? './images/vector-up.svg' : './images/vector-down.svg';
-//   });
-// });
-
-// $('.statistics__button-show-all').click(function() {
-//   if ($(this).hasClass('active')) {
-//     $(this).closest('.statistics__table').find('.statistics__block-show-all').slideUp(300);
-//     $(this).removeClass('active')
-//   } else {
-//     $('.statistics__button-show-all').closest('.statistics__table').find('.statistics__block-show-all').slideUp(600);
-//     $('.statistics__button-show-all').removeClass('active')
-
-//     $(this).closest('.statistics__table').find('.statistics__block-show-all').slideDown(300);
-//     $(this).addClass('active')
-//   }
-// });
 
 // ---------- /Кнопка развертывания таблицы
+
