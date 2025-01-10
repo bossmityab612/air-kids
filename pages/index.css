@@ -1,5 +1,7 @@
-@import url('../vendor/nullstyle.css'); /* ОБНУЛЕНИЕ */
-@import url('../vendor/ermilov-bold.css'); /* Шрифт Ермилов */
+@import url('../vendor/nullstyle.css');
+/* ОБНУЛЕНИЕ */
+@import url('../vendor/ermilov-bold.css');
+/* Шрифт Ермилов */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('./index-news.css');
 @import url('./index-news-card.css');
@@ -15,14 +17,14 @@
 @import url('./index-teams-profiles-statistics.css');
 
 
-*{
+* {
   /* outline: 1px solid green; */
   box-sizing: border-box;
 }
 
 :root {
   --ermilov-bold: 'Ermilov-Bold', Arial, Helvetica, sans-serif;
-  --rubick: 'Rubik' , Arial, Helvetica, sans-serif;
+  --rubick: 'Rubik', Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -32,7 +34,7 @@ body {
   position: relative;
   font-family: var(--rubick);
   background-color: #F2F2F2;
-}   
+}
 
 .container {
   max-width: 1140px;
@@ -141,7 +143,7 @@ body {
   display: flex;
   flex-direction: row;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .intro__image {
@@ -164,7 +166,7 @@ body {
   display: flex;
 }
 
-.swiper-horizontal.intro  {
+.swiper-horizontal.intro {
   padding: 0;
 }
 
@@ -197,15 +199,17 @@ body {
   z-index: 2;
 }
 
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
   content: '';
   opacity: 0;
 }
 
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
   content: '';
   opacity: 0;
-} 
+}
 
 /* ---- Блок МАТЧИ расписание ----- */
 .matches-swiper {
@@ -362,7 +366,7 @@ body {
   padding: 6px;
 }
 
-.news-cards-text h3 {
+.news-cards-text__title {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
@@ -403,7 +407,7 @@ body {
 /* ---------- Таблица с расписанием матчей -------- */
 .statistics__table {
   width: 100%;
-  margin: 20px auto; 
+  margin: 20px auto;
   border-collapse: collapse;
   font-family: var(--ermilov-bold);
   display: table;
@@ -411,7 +415,7 @@ body {
 
 .statistics__table-block {
   overflow-x: auto;
-  margin: 20px auto; 
+  margin: 20px auto;
 }
 
 .statistics__table thead {
@@ -518,6 +522,118 @@ body {
   text-transform: uppercase;
 }
 
+.select-wrap {
+  position: relative;
+}
+
+.def-select {
+  display: none;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.custom-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  color: white;
+  border: 1px solid #E1E1E1;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.custom-select__value {
+  height: fit-content;
+  padding: 3px 5px;
+  font-size: 12px;
+  color: #303030;
+  margin-right: 92px;
+}
+
+.custom-select__arrow {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  inset: 50% 5% 0% auto;
+  border-right: 1px solid #303030;
+  border-bottom: 1px solid #303030;
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform .5s ease;
+}
+
+.select-dropdown {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 10px 0px;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  height: 200%;
+  max-height: 0px;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  border: 1px solid #303030;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.select-dropdown::-webkit-scrollbar {
+  width: 2px;
+}
+
+.select-dropdown::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.select-dropdown::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.select-dropdown li {
+  position: relative;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #222325;
+  background: #ffffff;
+}
+
+.select-dropdown li:hover {
+  background-color: #ffad32;
+}
+
+.select-dropdown .active-item,
+.select-dropdown .active-item:hover {
+  background-color: #ffad32;
+  color: #000;
+}
+
+.select-dropdown li label {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  font-weight: 500;
+}
+
+.custom-select_active .custom-select__arrow {
+  transform: rotate(-135deg);
+}
+
+.custom-select_active+.select-dropdown {
+  opacity: 1;
+  visibility: visible;
+  max-height: 200%;
+}
+
 .play-off {
   display: flex;
   gap: 50px;
@@ -540,6 +656,7 @@ body {
   gap: 50px;
   margin-bottom: 65px;
 }
+
 .play-off__head {
   text-align: center;
   background: #ffad32;
@@ -586,12 +703,15 @@ body {
   line-height: 25px;
   padding: 0 4px;
 }
+
 .play-off__team_winner {
   background-color: #6d1ad74d;
 }
+
 .play-off__team:last-of-type {
   border-top: none;
 }
+
 .play-off__team p {
   display: flex;
   justify-content: center;
@@ -612,10 +732,12 @@ body {
   text-wrap: 600;
   text-align: center;
 }
+
 .play-off__item_thirdplace .play-off__team {
   border: none;
   border-top: 1px solid #e1e1e1;
 }
+
 .play-off__item_thirdplace .play-off__caption {
   padding-left: 12px;
 }
@@ -687,7 +809,7 @@ body {
     "area5 area5 area6"
     "area7 area7 area8";
 }
-  
+
 .area1 {
   grid-area: area1;
 }
@@ -837,9 +959,11 @@ footer {
 
   .play-off__step {
     gap: 30px;
-  
+
   }
-  .play-off__item,.play-off__head {
+
+  .play-off__item,
+  .play-off__head {
     max-width: 237px;
     width: 100%;
   }
@@ -882,7 +1006,7 @@ footer {
     transition: max-height .3s, padding .3s;
     overflow: hidden;
   }
-  
+
   .header__navigation-list_active {
     max-height: 100vh;
     padding: 32px 0px;
@@ -918,18 +1042,21 @@ footer {
     width: 32px;
   }
 
-  .burger.active .burger__block{
+  .burger.active .burger__block {
     gap: 0;
   }
-  .burger.active .burger__lines:first-child{
+
+  .burger.active .burger__lines:first-child {
     transform: rotate(-45deg) translateY(125%);
   }
-  .burger.active .burger__lines:nth-child(2){
-    
+
+  .burger.active .burger__lines:nth-child(2) {
+
     transform-origin: left;
     transform: scaleX(0);
   }
-  .burger.active .burger__lines:last-child{
+
+  .burger.active .burger__lines:last-child {
     transform: rotate(45deg) translateY(-125%);
     width: 100%;
   }
@@ -968,7 +1095,7 @@ footer {
 }
 
 @media screen and (max-width: 525px) {
-  
+
   header a {
     padding: 10px 0px;
   }
@@ -1033,4 +1160,3 @@ footer {
     gap: 9px;
   }
 }
-

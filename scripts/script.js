@@ -54,20 +54,60 @@ document.addEventListener('DOMContentLoaded', () => {
 // ------- /Бургер
 
 
+// -------- Select
+
+document.addEventListener('DOMContentLoaded', () => {
+  const schedule = document.querySelector(".schedule");
+  const select = schedule.querySelector(".select-wrap");
+  const customSelect = select.querySelector(".custom-select");
+  const customDropdown = select.querySelector(".select-dropdown");
+  const defSelect = select.querySelector(".def-select");
+
+  for (const el of defSelect) {
+    let customOption = document.createElement("li");
+    customOption.textContent = el.textContent;
+
+    customDropdown.append(customOption);
+  }
+
+  const selectValue = select.querySelector(".custom-select__value");
+  const optionsList = customDropdown.querySelectorAll("li");
+
+  select.addEventListener("click", () => {
+    customSelect.classList.toggle("custom-select_active");
+  })
+
+  optionsList.forEach(option => {
+    function handler(e) {
+      // Click Events
+      if ((e.type === "click" && e.clientX !== 0 && e.clientY !== 0) || e.key === "Enter") {
+        e.currentTarget.parentNode.querySelector(".active-item")?.classList.remove("active-item");
+        select.value = e.currentTarget.textContent;
+        selectValue.textContent = this.textContent;
+
+        e.currentTarget.classList.add('active-item')
+      }
+    }
+
+    option.addEventListener("keyup", handler);
+    option.addEventListener("click", handler);
+  });
+});
+
 // ---------- Кнопка развертывания таблицы
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const showAllButton = document.querySelector('.statistics__button-show-all');
   const showAllTable = document.querySelector('.statistics__table.statistics__block-show-all');
 
   if (showAllButton && showAllTable) {
-    showAllButton.addEventListener('click', function() {
+    showAllButton.addEventListener('click', function () {
       showAllTable.classList.toggle('active');
-      
+
       // Обновляем текст кнопки
       const buttonText = this.querySelector('p');
       buttonText.textContent = buttonText.textContent === 'Результаты матчей' ? 'Скрыть результаты' : 'Результаты матчей';
-      
+
       // Изменяем изображение стрелки
       const arrowImage = this.querySelector('img');
       arrowImage.src = arrowImage.src.includes('vector-down.svg') ? './images/vector-up.svg' : './images/vector-down.svg';
@@ -81,12 +121,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ------- Кнопка изменения цвета в календаре
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const calendarTable = document.querySelector('.calendar__table tbody tr');
-  
-  calendarTable.addEventListener('click', function(event) {
+
+  calendarTable.addEventListener('click', function (event) {
     const target = event.target;
-    
+
     // Проверяем, является ли цель элементом <td>
     if (target.tagName === 'TD') {
       // Добавляем или удаляем класс 'active'
