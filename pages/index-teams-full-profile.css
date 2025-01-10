@@ -1,59 +1,108 @@
 .teams-full-pfofile {
-    min-height: 486px;
-    padding-top: 50px;
+  min-height: 486px;
+  padding-top: 50px;
 }
 
 .teams__full-info {
-    margin: 0 auto;
-    padding: 50px 0;
-    background-color: #6D1AD7;
-    border-radius: 10px;
-    min-height: 228px;
-    max-width: 910px;
-    width: 100%;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
+  margin: 0 auto;
+  padding: 50px 0;
+  background-color: #6D1AD7;
+  border-radius: 10px;
+  min-height: 228px;
+  max-width: 910px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
 }
 
 .teams__full-info img {
-    width: 190px;
-    height: 190px;
-    object-fit: cover;
-    margin: auto 49px 22px;
-    margin-right: 40px;
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  margin: auto 49px 22px;
+  margin-right: 40px;
 }
 
 .teams__block-full-text h3 {
-    font-size: 25px;
-    padding: 0 0 16px 0;
+  font-size: 25px;
+  padding: 0 0 16px 0;
 }
 
 .teams__block-full-text p {
-    line-height: 20px;
-    padding: 0 0 8px 0;
-    font-size: 12px;
+  line-height: 20px;
+  padding: 0 0 8px 0;
+  font-size: 12px;
 }
 
 .teams__block-full-text {
-    margin: 24px 0 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  margin: 24px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.teams-full-pfofile .statistics__table {
-    margin: 50px auto;
-    border: 1px solid #000;
-    border-radius: 10px;
-    max-width: 910px;
-    width: 100%;
-    min-height: 108px;
+/* .teams-full-pfofile .teams__table-block .teams__table {
+  margin: 50px auto;
+  border-radius: 10px;
+  max-width: 910px;
+  width: 100%;
+  min-height: 108px;
+  border: 1px solid red;
+} */
+
+.teams__table {
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 910px;
+  width: 100%;
+  min-height: 108px;
+  display: block;
+  border-collapse: collapse;
 }
+
+.teams__table-block {
+  overflow-x: auto;
+  margin: 20px auto; 
+}
+
+.teams__table thead {
+  background-color: #6D1AD7;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  display: table;
+}
+
+.teams__table thead tr td {
+  padding: 20px;
+  text-align: center;
+}
+
+.teams__table tbody {
+  display: table;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.teams__table tbody tr td {
+  padding: 20px;
+  text-align: center;
+}
+
+.teams__table tbody .teams__table_table-row:nth-child(odd) {
+  background-color: #FFAD3280;
+}
+
+.teams__table tbody .teams__table_table-row:nth-child(even) {
+  background-color: #F7F8FF;
+}
+
+
 
 @media screen and (max-width: 563px) {
-    .teams__full-info {
-        flex-direction: column;
-        align-items: center;
-    }
+  .teams__full-info {
+    flex-direction: column;
+    align-items: center;
+  }
 }
