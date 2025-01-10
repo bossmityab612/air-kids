@@ -41,12 +41,14 @@ const matchesSwiper = new Swiper('.matches-swiper', {
 // -------- Бургер
 
 document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('.burger');
-  const navigationList = document.querySelector('.header__navigation-list');
+  const header = document.querySelector('.header');
+  const burger = header.querySelector('.burger');
+  const navigationList = header.querySelector('.header__navigation-list');
 
+  const headerHeight = header.clientHeight;
   burger.addEventListener('click', () => {
     burger.classList.toggle('active');
-    navigationList.style.display = navigationList.style.display === 'none' ? 'block' : 'none';
+    navigationList.classList.toggle('header__navigation-list_active');
   });
 });
 // ------- /Бургер

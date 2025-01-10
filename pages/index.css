@@ -876,11 +876,16 @@ footer {
     color: #000;
     font-size: 22px;
     z-index: 11;
-    height: 100vh;
+    height: calc(-81px + 100vh);
+    max-height: 0px;
+    padding: 0;
+    transition: max-height .3s, padding .3s;
+    overflow: hidden;
   }
   
-  .header__navigation-list {
-    display: none;
+  .header__navigation-list_active {
+    max-height: 100vh;
+    padding: 32px 0px;
   }
 
   .burger {
@@ -906,10 +911,27 @@ footer {
     width: 44px;
     height: 7px;
     border-radius: 21px;
+    transition: transform .3s, width .3s;
   }
 
   .burger__lines:last-child {
     width: 32px;
+  }
+
+  .burger.active .burger__block{
+    gap: 0;
+  }
+  .burger.active .burger__lines:first-child{
+    transform: rotate(-45deg) translateY(125%);
+  }
+  .burger.active .burger__lines:nth-child(2){
+    
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  .burger.active .burger__lines:last-child{
+    transform: rotate(45deg) translateY(-125%);
+    width: 100%;
   }
 
   .burger__lines.active {
