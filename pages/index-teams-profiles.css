@@ -1,106 +1,132 @@
-.teams__block {
-    max-width: 1040px;
-    width: 100%;
-    min-height: 530px;
-    display: flex;
-    flex-direction: row;
-    margin: 20px auto 0;
-    justify-content: space-between;
+.container.teams {
+  padding: 0;
 }
 
-.teams__info {
-    max-width: 353px;
-    width: 100%;
+.teams__info-players-block {
+  max-width: 1040px;
+  width: 100%;
+  min-height: 530px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+  margin: 0 auto;
 }
 
-.teams__info-logo-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.teams__prev-page-button {
+  margin: 40px 40px 0 40px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  max-width: 100px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #6D1AD7;
 }
 
-.teams__info-logo-title img {
-    margin-right: 40px;
+.teams__prev-page-button:hover {
+  background-color: #FFAD32;
 }
 
-.teams__info-logo-title-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
+.teams__prev-page-button p {
+  color: #fff;
+  text-transform: uppercase;
 }
 
-.teams__info-logo-title-block h3 {
-    font-size: 20px;
-    font-weight: bold;
+.teams__block-info {
+  max-width: 353px;
+  width: 100%;
 }
 
-.teams__info-logo-title-block h3:last-child {
-    font-size: 15px;
+.teams__block-info-logo-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.teams__info-history {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.teams__block-info-logo-title img {
+  margin-right: 40px;
 }
 
-.teams__info-history p {
-    font-size: 15px;
-    line-height: 20px;
+.teams__block-info-logo-title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.teams__block-info-logo-title-block h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.teams__block-info-logo-title-block h3:last-child {
+  font-size: 15px;
+}
+
+.teams__block-info-history {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.teams__block-info-history p {
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .teams__players-cards {
-    max-width: 662px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 662px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .teams__players-cards-item {
-    padding: 10px;
-    max-width: 194px;
-    width: 100%;
-    min-height: 245px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
+  padding: 10px;
+  max-width: 194px;
+  width: 100%;
+  min-height: 245px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
 .teams__players-cards-item:hover {
-    background-color: #FFAD32;
-    color: #fff;
-    transition: all 0.3s ease;
+  background-color: #FFAD32;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 .teams__players-cards-item img {
-    width: 105px;
-    height: 105px;
-    object-fit: cover;
+  width: 105px;
+  height: 105px;
+  object-fit: cover;
 }
 
 .teams__players-cards-item h4, 
 .teams__players-cards-item h5 {
-    margin-top: 7px;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 20px;
+  margin-top: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
 }
 
 .teams__players-cards-item p {
-    font-size: 12px;
-    line-height: 20px;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 
 @media screen and (max-width: 425px) {
-    .teams__block {
-        flex-direction: column;
-    }
+  .teams__block {
+    flex-direction: column;
+  }
 }
