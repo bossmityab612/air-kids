@@ -1,7 +1,5 @@
-@import url('../vendor/nullstyle.css');
-/* ОБНУЛЕНИЕ */
-@import url('../vendor/ermilov-bold.css');
-/* Шрифт Ермилов */
+@import url('../vendor/nullstyle.css');/* ОБНУЛЕНИЕ */
+@import url('../vendor/ermilov-bold.css');/* Шрифт Ермилов */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('./index-news.css');
 @import url('./index-news-card.css');
@@ -15,6 +13,8 @@
 @import url('./index-teams-profiles-squad.css');
 @import url('./index-teams-profiles-schedule.css');
 @import url('./index-teams-profiles-statistics.css');
+@import url('./index-match-before.css');
+@import url('./index-team-of-players.css');
 
 
 * {
@@ -863,7 +863,7 @@ body {
 /*-----------------------------*/
 
 footer {
-  margin: 0;
+  margin: 25px 0 0 0;
   display: flex;
   flex-direction: row;
   justify-content: center;

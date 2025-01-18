@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+.teams__block {
+  padding: 40px;
+}
+
 .teams__info-players-block {
   max-width: 1040px;
   width: 100%;
@@ -13,7 +17,6 @@
 }
 
 .teams__prev-page-button {
-  margin: 40px 40px 0 40px;
   display: flex;
   text-align: center;
   align-items: center;

@@ -1,0 +1,24 @@
+.team-of-players {
+  min-height: 425px;
+  width: 100%;
+  margin: 0 auto 25px;
+  font-weight: bold;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 5px #CCCCCC;
+}
+
+.team-of-players h2 {
+  margin: 20px auto 33px;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid #DDDDDD;
+  max-width: 1100px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.team-of-players img {
+  margin: 60px auto 132px;
+  display: block;
+}
