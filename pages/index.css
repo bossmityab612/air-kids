@@ -336,6 +336,7 @@ body {
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
+  list-style: none;
 }
 
 .news__cards-item {
@@ -443,6 +444,7 @@ body {
   flex-direction: row;
   gap: 6px;
   justify-content: center;
+  list-style: none;
 }
 
 .statistics__table tbody tr td ul li span {
@@ -808,6 +810,7 @@ body {
     "area3 area3 area4"
     "area5 area5 area6"
     "area7 area7 area8";
+  list-style: none;
 }
 
 .area1 {
@@ -1068,6 +1071,7 @@ footer {
   .news__cards-block {
     flex-direction: column;
     flex-wrap: nowrap;
+    list-style: none;
   }
 
   .news-section__cards-block-matrix.news__cards-block {

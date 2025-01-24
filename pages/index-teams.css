@@ -1,79 +1,97 @@
 .teams {
-    background-color: #fff;
-    min-height: 609px;
+  background-color: #fff;
+  min-height: 609px;
 }
 
 .teams header {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    min-height: 58px;
-    background-color: #6D1AD7;
-    color: #fff;
-    font-size: 25px;
-    font-weight: bold;
-    padding: 0 0 0 50px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 58px;
+  background-color: #6D1AD7;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0 0 0 50px;
 }
 
 .teams__links-block {
-    display: flex;
-    flex-direction: row;
-    max-width: 625px;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  max-width: 625px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 header a {
-    display: flex;
-    align-items: center;
-    padding: 19px 7px;
+  display: flex;
+  align-items: center;
+  padding: 19px 7px;
 }
 
 .teams header a:first-child {
-    background-color: #FFAD32;
+  background-color: #FFAD32;
 }
 
 .teams header a:hover {
-    background-color: #5511AB;
-    transition: all .3s ease-in;
+  background-color: #5511AB;
+  transition: all .3s ease-in;
 }
 
 .teams h2 {
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: bold;
-    border-bottom: 1px solid #DDDDDD;
-    max-width: 1100px;
-    width: 100%;
-    padding: 0 10px 10px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #DDDDDD;
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 10px 10px;
 }
 
 .teams__logos {
-    margin: 30px auto 0;
-    max-width: 950px;
-    min-height: 450px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  margin: 30px auto 0;
+  max-width: 950px;
+  min-height: 450px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-items: center;
 }
 
 .teams__logos-card {
-    padding: 18px;
-    max-width: 200px;
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  padding: 18px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .teams__logos-card:hover {
-    background-color: #EBE9E9;
+  background-color: #EBE9E9;
+}
+
+.teams__logos-card img {
+  max-width: 130px;  
 }
 
 .teams__logos-card-title {
-    text-align: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .teams__logos {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .teams__logos-card img {
+    max-width: 100px;
+    width: 100%;
+  }
 }

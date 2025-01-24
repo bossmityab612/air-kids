@@ -1,9 +1,11 @@
 .container.teams {
-  padding: 0;
+  padding: 20px;
 }
 
 .teams__block {
   padding: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .teams__info-players-block {
@@ -127,6 +129,17 @@
   line-height: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .teams__info-players-block {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .teams__block-info {
+    max-width: none;
+  }
+}
 
 @media screen and (max-width: 425px) {
   .teams__block {

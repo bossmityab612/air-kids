@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.classList.toggle('active');
     navigationList.classList.toggle('header__navigation-list_active');
   });
+
+  headerHeight();
 });
 // ------- /Бургер
 

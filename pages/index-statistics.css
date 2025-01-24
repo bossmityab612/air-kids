@@ -34,7 +34,6 @@
     font-size: 16px;
 }
 
-
 .statistics__table-players {
     min-height: 144px;
 }
@@ -42,4 +41,10 @@
 .statistics__table-command {
     min-height: 288px;
 }
+
+.statistics__table tbody .statistics__table_table-row td:nth-child(2) {
+    text-align: left;
+    padding: 20px 0;
+  }
+
 

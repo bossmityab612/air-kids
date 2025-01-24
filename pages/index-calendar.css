@@ -15,7 +15,8 @@
 }
 
 .calendar select {
-  margin-left: 82px;
+  /* margin-left: 82px; */
+  margin: 0;
   max-width: 121px;
   width: 100%;
   min-height: 38px;

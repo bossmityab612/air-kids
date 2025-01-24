@@ -4,11 +4,11 @@
 }
 
 .teams-full-pfofile .teams__prev-page-button {
-  margin: 30px;
+  margin: 0;
 }
 
 .teams__full-info {
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 50px 0;
   background-color: #6D1AD7;
   border-radius: 10px;
@@ -52,8 +52,10 @@
   max-width: 910px;
   width: 100%;
   min-height: 108px;
-  display: block;
+  display: table;
   border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .teams__table-block {
@@ -64,9 +66,7 @@
 .teams__table thead {
   background-color: #6D1AD7;
   color: #fff;
-  border-radius: 10px 10px 0 0;
   width: 100%;
-  display: table;
 }
 
 .teams__table thead tr td {
@@ -75,9 +75,7 @@
 }
 
 .teams__table tbody {
-  display: table;
   width: 100%;
-  border-radius: 0 0 10px 10px;
 }
 
 .teams__table tbody tr td {
