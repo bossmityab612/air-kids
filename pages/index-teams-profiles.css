@@ -4,7 +4,6 @@
 
 .teams.teams-profiles {
   padding: 0;
-  border: 1px solid #000;
 }
 
 .teams__block {
@@ -149,5 +148,13 @@
 @media screen and (max-width: 425px) {
   .teams__block {
     flex-direction: column;
+  }
+
+  .teams header {
+    font-size: 17px;
+  }
+
+  .teams__players-cards {
+    justify-content: center;
   }
 }
