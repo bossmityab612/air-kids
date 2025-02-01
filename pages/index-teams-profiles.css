@@ -2,6 +2,11 @@
   padding: 20px;
 }
 
+.teams.teams-profiles {
+  padding: 0;
+  border: 1px solid #000;
+}
+
 .teams__block {
   padding: 40px;
   display: flex;

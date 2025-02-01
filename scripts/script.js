@@ -96,27 +96,61 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// -------- /Select
+
+
 // ---------- Кнопка развертывания таблицы
 
 document.addEventListener('DOMContentLoaded', function () {
-  const showAllButton = document.querySelector('.statistics__button-show-all');
-  const showAllTable = document.querySelector('.statistics__table.statistics__block-show-all');
+// Получаем все кнопки и таблицы
+const showAllButtons = document.querySelectorAll('.statistics__button-show-all');
+const showAllTables = document.querySelectorAll('.statistics__table.statistics__block-show-all');
 
-  if (showAllButton && showAllTable) {
-    showAllButton.addEventListener('click', function () {
-      showAllTable.classList.toggle('active');
+// Проверяем наличие элементов
+if (showAllButtons.length === 0 || showAllTables.length === 0) {
+  console.error('Элементы не найдены');
+  return;
+}
 
-      // Обновляем текст кнопки
-      const buttonText = this.querySelector('p');
-      buttonText.textContent = buttonText.textContent === 'Результаты матчей' ? 'Скрыть результаты' : 'Результаты матчей';
+// Проверяем что количество кнопок и таблиц совпадает
+if (showAllButtons.length !== showAllTables.length) {
+  console.warn('Количество кнопок и таблиц не совпадает');
+}
 
-      // Изменяем изображение стрелки
-      const arrowImage = this.querySelector('img');
-      arrowImage.src = arrowImage.src.includes('vector-down.svg') ? './images/vector-up.svg' : './images/vector-down.svg';
-    });
-  } else {
-    console.error('Элементы не найдены');
-  }
+// Создаем массив пар кнопка-таблица
+const pairs = showAllButtons.length < showAllTables.length 
+  ? showAllButtons.length 
+  : showAllTables.length;
+
+// Обрабатываем каждую пару
+for (let i = 0; i < pairs; i++) {
+  const button = showAllButtons[i];
+  const table = showAllTables[i];
+
+  // Добавляем обработчик клика для текущей пары
+  button.addEventListener('click', function () {
+    // Тoggles активный класс для таблицы
+    table.classList.toggle('active');
+
+    // Находим элементы внутри кнопки
+    const buttonText = this.querySelector('p');
+    const arrowImage = this.querySelector('img');
+
+    // Обновляем текст кнопки
+    if (buttonText) {
+      buttonText.textContent = buttonText.textContent === 'Результаты матчей' 
+        ? 'Скрыть результаты' 
+        : 'Результаты матчей';
+    }
+
+    // Меняем изображение стрелки
+    if (arrowImage) {
+      arrowImage.src = arrowImage.src.includes('vector-down.svg') 
+        ? './images/vector-up.svg' 
+        : './images/vector-down.svg';
+    }
+  });
+}
 });
 
 // ---------- /Кнопка развертывания таблицы
