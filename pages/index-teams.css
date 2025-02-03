@@ -15,6 +15,10 @@
   padding: 0 0 0 50px;
 }
 
+.container.teams.teams-schedule {
+  padding: 0;
+}
+
 .teams__links-block {
   display: flex;
   flex-direction: row;

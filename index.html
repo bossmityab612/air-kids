@@ -1405,7 +1405,7 @@
 				</table>
 			</div>
 
-			<button type="button" class="statistics__button-show-all">
+			<button type="button" class="statistics__button-show-all" aria-expanded="false" aria-controls="list">
 				<p>Результаты матчей</p>
 				<img src="./images/vector-down.svg" alt="стрелочка вниз">
 			</button>
@@ -1499,7 +1499,7 @@
 		<!-- ------ Контейнер с таблицей Плей-Офф и РАСПИСАНИЕМ------ -->
 
 		<!-- ----- Коллаж с фотографиями ----- -->
-		<h2 class="container schedule__title">Фото</h2>
+		<h2 class="container schedule__title" id="photo">Фото</h2>
 
 		<section>
 			<ul class="container photo-galery">
@@ -1544,17 +1544,17 @@
 			<div class="footer__links-block">
 				<div class="footer__links-block">
 					<ul class="footer__links-block-item">
-						<li><a href="#">Новости</a></li>
+						<li><a href="./news.html">Новости</a></li>
 						<li><a href="#">О лиге</a></li>
-						<li><a href="#">Календарь</a></li>
+						<li><a href="./calendar.html">Календарь</a></li>
 					</ul>
 					<ul class="footer__links-block-item">
-						<li><a href="#">Команды</a></li>
-						<li><a href="#">Игроки</a></li>
-						<li><a href="#">Статистика</a></li>
+						<li><a href="./teams.html">Команды</a></li>
+						<li><a href="./team-of-players.html">Игроки</a></li>
+						<li><a href="./statistics.html">Статистика</a></li>
 					</ul>
 					<ul class="footer__links-block-item">
-						<li><a href="#">Фото</a></li>
+						<li><a href="#photo">Фото</a></li>
 						<li><a href="#">Видео</a></li>
 						<li><a href="#">Контакты</a></li>
 					</ul>

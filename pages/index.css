@@ -471,15 +471,6 @@ body {
   background-color: #F7F8FF;
 }
 
-.statistics__block-show-all {
-  display: none;
-  transition: opacity 300ms ease-in-out;
-}
-
-.statistics__block-show-all.active {
-  display: table;
-}
-
 .statistics__button-show-all {
   margin: 0 auto;
   max-width: 180px;
@@ -493,12 +484,22 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .statistics__button-show-all:hover {
   background-color: #FFAD32;
-  transition: all 0.3s ease-out;
 }
+
+.statistics__block-show-all {
+  transition: max-height 0.3s ease-out;
+  display: none;
+}
+
+.statistics__block-show-all.active {
+  display: table;
+}
+
 
 /* ---------- /Таблица с расписанием матчей -------- */
 
@@ -925,6 +926,11 @@ footer {
   line-height: 20px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.footer__links-block-item a:hover {
+  opacity: .4;
+  transition: all ease-out .3s;
 }
 
 /* ----- Медиа-запросы ---- */

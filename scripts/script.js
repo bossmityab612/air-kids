@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   burger.addEventListener('click', () => {
     burger.classList.toggle('active');
     navigationList.classList.toggle('header__navigation-list_active');
-  });
+  }); 
 
   headerHeight();
 });
@@ -129,10 +129,8 @@ for (let i = 0; i < pairs; i++) {
 
   // Добавляем обработчик клика для текущей пары
   button.addEventListener('click', function () {
-    // Тoggles активный класс для таблицы
     table.classList.toggle('active');
 
-    // Находим элементы внутри кнопки
     const buttonText = this.querySelector('p');
     const arrowImage = this.querySelector('img');
 
@@ -154,6 +152,7 @@ for (let i = 0; i < pairs; i++) {
 });
 
 // ---------- /Кнопка развертывания таблицы
+
 
 // ------- Кнопка изменения цвета в календаре
 
