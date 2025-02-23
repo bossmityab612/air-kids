@@ -66,41 +66,44 @@ body {
 .header__block {
   display: flex;
   gap: 20px;
-  max-width: 1257px;
+  max-width: 1244px;
   width: 100%;
   height: 100%;
   justify-content: center;
   margin: auto 0;
 }
 
-.header__logo-link {
-  max-width: 109px;
-  width: 100%;
-  min-height: 81px;
+.header__logo-link a {
+  display: block;
   margin: 0;
   padding: 0;
-  background-image: url('../images/Logo.svg');
-  object-fit: contain;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+}
+
+.header__logo-link img {
+  margin: 0;
+  padding: 0;
+  max-width: 60px;
+  width: 100%;
+  min-height: 74px;
 }
 
 .header__navigation-list li {
+  max-width: 167px;
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-self: center;
 }
 
 .header__navigation-list a {
   text-decoration: none;
   height: 100%;
+  width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
-  width: fit-content;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .header__navigation-list {
@@ -123,11 +126,11 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease-out;
 }
 
 .header__navigation-list-item:hover {
   background-color: #FFAD32;
-  transition: all 0.3s ease-out;
 }
 
 .header__navigation-link {
@@ -209,6 +212,22 @@ body {
 .swiper-rtl .swiper-button-prev:after {
   content: '';
   opacity: 0;
+}
+
+.swiper-pagination-bullet {
+  background: var(--swiper-pagination-bullet-inactive-color, transparent);
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
 }
 
 /* ---- Блок МАТЧИ расписание ----- */
@@ -315,14 +334,25 @@ body {
 
 /* ---- Блок РЕГИСТРАЦИЯ ----- */
 
+.container.registration {
+  padding: 0;
+}
+
+
 .registration {
-  background-image: url('../images/reg-image.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  overflow: hidden;
   width: 100%;
-  margin: 25px auto;
-  min-height: 142px;
+  object-fit: cover;
+  border: 1px solid #000;
+}
+
+.registration a {
+  border: 1px solid #000;
+  display: block;
+}
+
+.registration img {
+  object-fit: contain;
 }
 
 /* ----- Блок НОВОСТИ ----- */
@@ -379,6 +409,11 @@ body {
   line-height: 18px;
   text-align: left;
 }
+
+/*----------- Контейнер Записи в ЛБЛК ---------- */
+
+
+/*----------- /Контейнер Записи в ЛБЛК ---------- */
 
 
 /* ----- Блок с ТАБЛИЦЕЙ ----- */
@@ -888,7 +923,12 @@ footer {
   min-height: 186px;
 }
 
-.footer__block img {
+.footer__block a {
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.footer__block img   {
   margin-right: 110px;
 }
 
@@ -1148,6 +1188,10 @@ footer {
 
   .news-section__cards-block-matrix.news__cards-block {
     grid-template-columns: 1fr;
+  }
+
+  .custom-select__value {
+    margin-right: 0;
   }
 }
 
