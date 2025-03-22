@@ -254,15 +254,15 @@ body {
 }
 
 .matches__button img {
-  width: 32px;
-  height: 32px;
+  width: 13px;
+  height: 26px;
 }
 
 .matches__button-prev {
   margin-right: 20px;
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: 52%;
+  left: 46px;
   background-color: transparent;
   z-index: 2;
 }
@@ -270,8 +270,8 @@ body {
 .matches__button-next {
   margin-left: 20px;
   position: absolute;
-  top: 50%;
-  right: 0;
+  top: 52%;
+  right: 48px;
   background-color: transparent;
   z-index: 2;
 }
@@ -343,11 +343,9 @@ body {
   overflow: hidden;
   width: 100%;
   object-fit: cover;
-  border: 1px solid #000;
 }
 
 .registration a {
-  border: 1px solid #000;
   display: block;
 }
 
@@ -925,7 +923,6 @@ footer {
 
 .footer__block a {
   cursor: pointer;
-  border: 1px solid #000;
 }
 
 .footer__block img   {

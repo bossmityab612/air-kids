@@ -14,6 +14,11 @@
   width: 100%;
 }
 
+.calendar-block {
+  max-width: 962px;
+  margin: 0 auto;
+}
+
 .calendar select {
   margin: 0;
   max-width: 121px;
@@ -38,7 +43,6 @@
 }
 
 .calendar__table {
-  max-width: 962px;
   width: 100%;
   min-height: 445px;
   display: table;

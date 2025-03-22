@@ -20,6 +20,7 @@
   flex-direction: row;
   padding: 20px 0;
   margin: 0 auto;
+  gap: 24px;
 }
 
 .teams__prev-page-button {
@@ -97,8 +98,12 @@
 }
 
 .teams__players-cards-item {
-  padding: 10px;
+  list-style: none;
   max-width: 194px;
+}
+
+.teams__players-cards-item a {
+  padding: 10px;
   width: 100%;
   min-height: 245px;
   border-radius: 10px;
