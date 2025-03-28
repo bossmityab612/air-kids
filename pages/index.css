@@ -228,6 +228,7 @@ body {
   width: 10px;
   height: 10px;
   opacity: 1;
+  background-color: transparent;
 }
 
 /* ---- Блок МАТЧИ расписание ----- */
@@ -338,19 +339,21 @@ body {
   padding: 0;
 }
 
-
 .registration {
   overflow: hidden;
   width: 100%;
-  object-fit: cover;
 }
 
 .registration a {
+  min-height: 143px;
+  object-fit: contain;
   display: block;
+  background-image: url('../images/reg-image.png');
+  transition: all ease-out .2s;
 }
 
-.registration img {
-  object-fit: contain;
+.registration a:hover {
+  opacity: .8;
 }
 
 /* ----- Блок НОВОСТИ ----- */
@@ -420,20 +423,6 @@ body {
   width: 100%;
   min-height: 566px;
   object-fit: contain;
-}
-
-/* ----- Блок СЕРЫЙ БЛОК-1 ----- */
-
-.grey-block {
-  width: 100%;
-  background-color: #909090;
-}
-
-/* ----- Блок СЕРЫЙ БЛОК-1 ----- */
-.grey-block-1 {
-  margin: 40px auto;
-  width: 100%;
-  min-height: 143px;
 }
 
 /* ----- Блок РАСПИСАНИЕ ----- */
@@ -885,20 +874,6 @@ body {
   object-fit: cover;
 }
 
-
-
-/* ----- Блок СЕРЫЙ БЛОК-2 ----- */
-
-.grey-block-2 {
-  margin: 40px auto 0;
-  width: 100%;
-  min-height: 100px;
-  min-height: 424px;
-  background-color: #909090;
-}
-
-/*-----------------------------*/
-
 footer {
   margin: 25px 0 0 0;
   display: flex;
@@ -976,13 +951,6 @@ footer {
   .news__cards-block {
     gap: 12px;
     padding: 0 12px;
-  }
-}
-
-
-@media screen and (max-width: 1024px) {
-  .grey-block-2 {
-    min-height: 225px;
   }
 }
 
@@ -1121,10 +1089,6 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .grey-block-1 {
-    margin: 0 auto 40px;
-  }
-
   .schedule__play-off-block {
     flex-direction: column;
     align-items: center;
@@ -1165,10 +1129,6 @@ footer {
 
   .play-off__team svg {
     width: 14px;
-  }
-
-  .grey-block-2 {
-    min-height: 160px;
   }
 
   .footer__links-block-item a {

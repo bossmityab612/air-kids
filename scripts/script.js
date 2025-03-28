@@ -9,6 +9,24 @@ const introSwiper = new Swiper('.intro', {
     nextEl: '.intro__button-right',
     prevEl: '.intro__button-left'
   },
+  autoplay: {
+    delay: 3000,          // Задержка между слайдами (в миллисекундах)
+    disableOnInteraction: false,  // Продолжать автопрокрутку после взаимодействия
+    
+    // Дополнительные опции
+    pauseOnMouseEnter: true,     // Пауза при наведении мыши
+    stopOnLastSlide: false       // Не останавливаться на последнем слайде
+  },
+  pagination: {
+    el: '.swiper-pagination',     // Селектор элемента пагинации
+    clickable: true,             // Включить кликабельную пагинацию
+    type: 'bullets',             // Тип пагинации ('bullets' или 'fraction')
+    
+    // Для дробной пагинации
+    renderFraction: function(currentClass, totalClass) {
+      return '<span class="' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
+    }
+  },
 });
 // ----- /Слайдер для Интро
 
@@ -19,6 +37,7 @@ const matchesSwiper = new Swiper('.matches-swiper', {
   slidesPerView: 1,
   spaceBetween: 23,
   loop: true,
+  // pagination: true,
   navigation: {
     nextEl: '.matches__button-next',
     prevEl: '.matches__button-prev'
