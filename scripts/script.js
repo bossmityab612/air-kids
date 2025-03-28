@@ -9,14 +9,14 @@ const introSwiper = new Swiper('.intro', {
     nextEl: '.intro__button-right',
     prevEl: '.intro__button-left'
   },
-  autoplay: {
-    delay: 3000,          // Задержка между слайдами (в миллисекундах)
-    disableOnInteraction: false,  // Продолжать автопрокрутку после взаимодействия
+  // autoplay: {
+  //   delay: 3000,          // Задержка между слайдами (в миллисекундах)
+  //   disableOnInteraction: false,  // Продолжать автопрокрутку после взаимодействия
     
-    // Дополнительные опции
-    pauseOnMouseEnter: true,     // Пауза при наведении мыши
-    stopOnLastSlide: false       // Не останавливаться на последнем слайде
-  },
+  //   // Дополнительные опции
+  //   pauseOnMouseEnter: true,     // Пауза при наведении мыши
+  //   stopOnLastSlide: false       // Не останавливаться на последнем слайде
+  // },
   pagination: {
     el: '.swiper-pagination',     // Селектор элемента пагинации
     clickable: true,             // Включить кликабельную пагинацию
