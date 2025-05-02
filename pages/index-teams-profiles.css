@@ -95,11 +95,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 
 .teams__players-cards-item {
+  width: 33%;
+  flex: 1;
   list-style: none;
-  max-width: 194px;
 }
 
 .teams__players-cards-item a {
@@ -136,6 +138,26 @@
 .teams__players-cards-item p {
   font-size: 12px;
   line-height: 20px;
+}
+.teams__players-cards-item p span{
+  font-weight: 400;
+}
+.tabs__panel {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+.tabs__panel.active {
+  display: block;
+}
+.teams-statistics__table-main-block{
+  padding: 28px;
+}
+.tabs__panel .statistics__table tbody .statistics__table_table-row td:nth-child(2){
+  text-align: center;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media screen and (max-width: 768px) {

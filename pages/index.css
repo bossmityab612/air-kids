@@ -1,5 +1,7 @@
-@import url('../vendor/nullstyle.css');/* ОБНУЛЕНИЕ */
-@import url('../vendor/ermilov-bold.css');/* Шрифт Ермилов */
+@import url('../vendor/nullstyle.css');
+/* ОБНУЛЕНИЕ */
+@import url('../vendor/ermilov-bold.css');
+/* Шрифт Ермилов */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('./index-news.css');
 @import url('./index-news-card.css');
@@ -60,7 +62,9 @@ body {
   width: 100%;
   max-height: 81px;
   background-color: #6D1AD7;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 25;
 }
 
 .header__block {
@@ -71,6 +75,7 @@ body {
   height: 100%;
   justify-content: center;
   margin: auto 0;
+  padding: 0 15px;
 }
 
 .header__logo-link a {
@@ -88,7 +93,6 @@ body {
 }
 
 .header__navigation-list li {
-  max-width: 167px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -117,6 +121,8 @@ body {
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
+  position: relative;
+  list-style: none;
 }
 
 .header__navigation-list-item {
@@ -127,6 +133,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease-out;
+  position: relative;
 }
 
 .header__navigation-list-item:hover {
@@ -141,12 +148,66 @@ body {
   display: none;
 }
 
+/* ------ Стили для dropdown --------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: auto;
+  right: auto;
+  display: flex;
+  flex-direction: column;
+  width: 120%;
+  background: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+.dropdown-menu li:first-child{
+  display: none;
+}
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li a {
+  display: block;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  color: #0066cc;
+}
+
 /* ------ Блок ИНТРО --------- */
 .intro {
   display: flex;
   flex-direction: row;
   position: relative;
   overflow: hidden;
+  border: 3px solid #000;
+  /* background: linear-gradient(to right, rgba(255, 0, 0, .5), rgba(0, 0, 255, 1)); */
 }
 
 .intro__image {
@@ -160,6 +221,8 @@ body {
 }
 
 .intro__image img {
+  background: linear-gradient(to right, pink, transparent, pink);
+  /* background: linear-gradient(to right left, blue, pink); */
   object-fit: cover;
   max-width: 1904px;
   width: 100%;
@@ -222,7 +285,8 @@ body {
   background: #ffffff;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   border-radius: 50%;
   border: 1px solid #fff;
   width: 10px;
@@ -250,28 +314,31 @@ body {
   position: relative;
   display: flex;
   margin: 0 auto;
-  max-width: 1270px;
+  max-width: 1170px;
 }
 
-.matches__button img {
+.matches__button img,
+.news__button img {
   width: 13px;
   height: 26px;
 }
 
-.matches__button-prev {
+.matches__button-prev,
+.news__button-prev {
   margin-right: 20px;
   position: absolute;
   top: 52%;
-  left: 46px;
+  left: 0;
   background-color: transparent;
   z-index: 2;
 }
 
-.matches__button-next {
+.matches__button-next,
+.news__button-next {
   margin-left: 20px;
   position: absolute;
   top: 52%;
-  right: 48px;
+  right: 0;
   background-color: transparent;
   z-index: 2;
 }
@@ -338,25 +405,28 @@ body {
   padding: 0;
 }
 
-
 .registration {
   overflow: hidden;
   width: 100%;
-  object-fit: cover;
 }
 
 .registration a {
+  min-height: 143px;
+  object-fit: contain;
   display: block;
+  background-image: url('../images/reg-image.png');
+  transition: all ease-out .2s;
 }
 
-.registration img {
-  object-fit: contain;
+.registration a:hover {
+  opacity: .8;
 }
 
 /* ----- Блок НОВОСТИ ----- */
 
 .news {
-  margin: 10px auto 88px;
+  margin: 10px auto 70px;
+  overflow: hidden;
 }
 
 .news__cards-block {
@@ -365,11 +435,11 @@ body {
   flex-direction: row;
   justify-content: space-around;
   list-style: none;
+  margin-bottom: 24px;
 }
 
 .news__cards-item {
   border-radius: 30px;
-  max-width: 360px;
   width: 100%;
   min-height: 414px;
   cursor: pointer;
@@ -393,12 +463,14 @@ body {
 
 .news-cards-text {
   padding: 6px;
+  min-height: 140px;
 }
 
 .news-cards-text__title {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+  margin-bottom: 12px;
 }
 
 .news-cards-text p:nth-child(2) {
@@ -407,9 +479,21 @@ body {
   line-height: 18px;
   text-align: left;
 }
+.news .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.news .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  background-color: rgb(201, 201, 201);
+  border-color: rgb(201, 201, 201);
+}
+.news .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active,
+.news .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active{
+  background-color: #000;
+  border-color: #000;
+}
 
 /*----------- Контейнер Записи в ЛБЛК ---------- */
-
+.table img {
+  background: linear-gradient(to right, pink, transparent, pink)
+}
 
 /*----------- /Контейнер Записи в ЛБЛК ---------- */
 
@@ -420,20 +504,6 @@ body {
   width: 100%;
   min-height: 566px;
   object-fit: contain;
-}
-
-/* ----- Блок СЕРЫЙ БЛОК-1 ----- */
-
-.grey-block {
-  width: 100%;
-  background-color: #909090;
-}
-
-/* ----- Блок СЕРЫЙ БЛОК-1 ----- */
-.grey-block-1 {
-  margin: 40px auto;
-  width: 100%;
-  min-height: 143px;
 }
 
 /* ----- Блок РАСПИСАНИЕ ----- */
@@ -885,19 +955,16 @@ body {
   object-fit: cover;
 }
 
-
-
-/* ----- Блок СЕРЫЙ БЛОК-2 ----- */
-
-.grey-block-2 {
-  margin: 40px auto 0;
-  width: 100%;
-  min-height: 100px;
-  min-height: 424px;
-  background-color: #909090;
+.photo-galery li{
+  cursor: pointer;
+  overflow: hidden;
 }
-
-/*-----------------------------*/
+.photo-galery li img{
+  transition: transform .2s ease;
+}
+.photo-galery li:hover img{
+  transform: scale(1.2);
+}
 
 footer {
   margin: 25px 0 0 0;
@@ -923,10 +990,7 @@ footer {
 
 .footer__block a {
   cursor: pointer;
-}
-
-.footer__block img   {
-  margin-right: 110px;
+  margin-right: auto;
 }
 
 .footer__links-block {
@@ -963,28 +1027,14 @@ footer {
   line-height: 20px;
   font-weight: bold;
   text-transform: uppercase;
+  transition: color ease-out .3s;
 }
 
 .footer__links-block-item a:hover {
-  opacity: .4;
-  transition: all ease-out .3s;
+  color: #FFAD32;  
 }
 
 /* ----- Медиа-запросы ---- */
-
-@media screen and (max-width: 1140px) {
-  .news__cards-block {
-    gap: 12px;
-    padding: 0 12px;
-  }
-}
-
-
-@media screen and (max-width: 1024px) {
-  .grey-block-2 {
-    min-height: 225px;
-  }
-}
 
 @media screen and (max-width: 956px) {
   .header__navigation-list {
@@ -1036,6 +1086,9 @@ footer {
     display: block;
   }
 
+  .dropdown-menu li {
+    height: fit-content;
+  }
 
   .header__navigation-list {
     display: flex;
@@ -1046,7 +1099,7 @@ footer {
     color: #000;
     font-size: 22px;
     z-index: 11;
-    height: calc(-81px + 100vh);
+    height: calc(-77px + 100vh);
     max-height: 0px;
     padding: 0;
     transition: max-height .3s, padding .3s;
@@ -1111,18 +1164,60 @@ footer {
     background-color: #fff;
   }
 
-  .news__cards-block {
+  .header__navigation-list {
     flex-direction: column;
-    flex-wrap: nowrap;
-    list-style: none;
+    width: 100%;
+  }
+
+  .dropdown {
+    position: static;
+  }
+
+  .dropdown-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    z-index: 1000;
+    padding-top: 60px;
+  }
+  .dropdown-menu li:first-child{
+    display: block;
+  }
+  .dropdown.active .dropdown-menu {
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .dropdown-toggle {
+    position: relative;
+  }
+
+  .dropdown-toggle::after {
+    content: '+';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+  }
+
+  .dropdown.active .dropdown-toggle::after {
+    content: '-';
   }
 
   .news-section__cards-block-matrix.news__cards-block {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .grey-block-1 {
-    margin: 0 auto 40px;
   }
 
   .schedule__play-off-block {
@@ -1165,10 +1260,6 @@ footer {
 
   .play-off__team svg {
     width: 14px;
-  }
-
-  .grey-block-2 {
-    min-height: 160px;
   }
 
   .footer__links-block-item a {

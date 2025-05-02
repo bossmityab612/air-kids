@@ -18,93 +18,224 @@
   max-width: 962px;
   margin: 0 auto;
 }
-
-.calendar select {
-  margin: 0;
-  max-width: 121px;
+.calendar-container {
   width: 100%;
-  min-height: 38px;
-  background-color: #6D1AD7;
-  border-radius: 8px;
-  text-align: center;
+  padding: 15px;
+  position: relative;
+  margin: 20px;
+}
+
+.calendar-header {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 8px;
-  color: #fff;
-  font-size: 20px;
-  
+  margin-bottom: 15px;
 }
 
-.calendar option {
-  padding: 0;
-  margin: 0;
-  font-family: var(--rubick);
-}
-
-.calendar__table {
-  width: 100%;
-  min-height: 445px;
-  display: table;
-  margin: 0 auto;
-  border-spacing: 4px;
-  font-family: var(--ermilov-bold);
-  overflow-x: auto;
-}
-
-.calendar__table thead tr td {
-  padding: 20px;
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   text-align: center;
-}
-
-.calendar__table tbody tr td ul {
-  display: flex;
-  flex-direction: row;
-  gap: 6px;
-  justify-content: center;
-}
-
-.calendar__table tbody tr td ul li span {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #0FD400;
-}
-
-.calendar__table thead tr td {
-  padding: 10px 10px 10px 5px;
-  text-align: left;
-  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
   color: #909090;
 }
 
-.calendar__table tbody tr td {
-  background-color: #6D1AD7;
-  color: #fff;
-  text-align: left;
-  padding: 6px 0 0 8px;
-  vertical-align: top;
-  font-size: 20px;
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day-cell {
+  height: 80px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
   cursor: pointer;
+  transition: all 0.2s;
   position: relative;
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+}
+.day-cell__backgound{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.day-cell__date{
+  position: absolute;
+  z-index: 2;
+  font-size: 20px;
+  top: 8px;
+  left: 8px;
 }
 
-.calendar__table tbody tr td:hover {
-  opacity: .7;
+/* Типы ячеек */
+.standard .day-cell__backgound{
+  background-color: #6D1AD7;
 }
 
-.calendar__table td.active {
-  background-color: #FFAD32; 
+.standard:hover .day-cell__backgound{
+  background-color: #7D2AE7;
 }
 
-.calendar__table tbody tr:last-child td:nth-child(n+4) {
+.inactive{  
+  color: #ccc;
+}
+.inactive .day-cell__backgound{
   background-color: #767676;
 }
 
-.calendar__table tbody tr:last-child td:nth-child(n+4):hover {
-  background-color: #494949;
+/* Запланированный матч */
+.scheduled-match {  
+  color: #000;
+}
+.scheduled-match .day-cell__backgound{
+  background-color: #FFAD32;
+}
+
+.scheduled-match.inactive {
+  background-color: #CC8A28;
+  color: #666;
+}
+
+/* Проведенный матч (зеленая галочка) */
+.completed-match {
+  
+  color: white;
+}
+.completed-match .day-cell__backgound{
+  background-color: #6D1AD7;
+}
+
+.completed-match::before {
+  content: "✓";  
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  color: #4CAF50;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Пройденный день (красный крестик) */
+.past-day {  
+  color: rgba(255, 255, 255, 0.7);
+}
+.past-day .day-cell__backgound{
+  background-color: #6D1AD7;
+  filter: brightness(0.7);
+}
+
+.past-day::after {
+  content: "";
+  background: url(../images/cross3.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 34px;
+  height: 34px;
+  right: auto;
+  font-size: 14px;
+  z-index: 2;
+}
+
+.past-day.inactive {
+  background-color: rgba(118, 118, 118, 0.5);
+}
+
+/* Сегодняшний день */
+.today {  
+  box-shadow: 0 0 0 2px #FFAD32 inset;
+}
+.today .day-cell__backgound{
+  background-color: #6D1AD7;
+}
+
+.comands{
+  margin-top: 20px;
+  z-index: 2;
+}
+.comands__icon-wrap{
+  display: flex;
+  gap: 20px;
+}
+.comands__icon-backround{
+  width: 20px;
+  height: 20px;
+  margin-bottom: 6px;
+}
+.custom-select {
+  position: relative;
+}
+
+.calendar-header .custom-select{
+  padding: 0;
+}
+
+.select-selected {
+  background-color: #6D1AD7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-selected:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #333;
+  transition: transform 0.3s;
+}
+
+.select-selected.select-arrow-active:after {
+  transform: rotate(180deg);
+}
+
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  transform-origin: top;
+  transition: transform .2s;
+}
+
+.select-items li {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #6D1AD7;
+}
+
+.select-items li:hover {
+  background-color: #f0f0f0;
+}
+
+.select-hide {  
+  transform: scaleY(0);
+}
+
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }

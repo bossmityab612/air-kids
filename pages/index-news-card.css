@@ -2,6 +2,10 @@
     padding: 0;
 }
 
+.matches:has(+.registration){
+    margin-bottom: 60px;
+}
+
 .news-card-section {
     display: flex;
     flex-direction: row;

@@ -27,21 +27,25 @@
   align-items: center;
 }
 
-.teams header a:first-child {
+.teams header button.active {
   background-color: #FFAD32;
   height: 100%;
 }
 
-.teams header a {
+.teams header button {
   display: block;
   height: 100%;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  background: transparent;
 }
 
-.teams header a:hover {
+.teams header button:hover {
   background-color: #5511AB;
   transition: all .3s ease-in;
 }
@@ -85,7 +89,7 @@
 }
 
 .teams__logos-card img {
-  max-width: 130px;  
+  max-width: 130px;
 }
 
 .teams__logos-card-title {
@@ -112,4 +116,3 @@
     justify-content: space-around;
   }
 }
-

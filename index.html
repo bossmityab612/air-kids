@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Air Kids</title>
 	<link rel="icon" href="./images/logo-icon.ico">
-	<link rel="stylesheet" href="./pages/index.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body>
@@ -22,9 +22,33 @@
 				<li class="header__navigation-list-item"><a href="./news.html">Новости</a></li>
 				<li class="header__navigation-list-item"><a href="./calendar.html">Календарь</a></li>
 				<li class="header__navigation-list-item"><a href="./teams.html">Команды</a></li>
-				<li class="header__navigation-list-item"><a href="./players.html">Игроки</a></li>
-				<li class="header__navigation-list-item"><a href="./statistics.html">Статистика</a></li>
-				<li class="header__navigation-list-item"><a href="#">Медиа</a></li>
+
+				<li class="header__navigation-list-item dropdown">
+					<a href="./players.html" class="dropdown-toggle">Игроки</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Игроки</a></li>
+						<li><a href="#">MVP</a></li>
+						<li><a href="#">Команда MVP</a></li>
+					</ul>
+				</li>
+
+				<li class="header__navigation-list-item dropdown">
+					<a href="./statistics.html" class="dropdown-toggle">Статистика</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Статистика</a></li>
+						<li><a href="#">Статистика турнира</a></li>
+						<li><a href="#">Турнирная таблица</a></li>
+					</ul>
+				</li>
+
+				<li class="header__navigation-list-item dropdown">
+					<a href="#" class="dropdown-toggle">Медиа</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Медиа</a></li>
+						<li><a href="https://example.com/photos" target="_blank">Фото</a></li>
+						<li><a href="https://example.com/videos" target="_blank">Видео</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 		<div class="burger">
@@ -346,14 +370,17 @@
 		<!-- -------/Секция со слайдером краткого расписания матчей------ -->
 
 
+		<!-- ---------------- Блок РЕГИСТРАЦИЯ -------------- -->
 		<section class="container registration">
-			<a href="#"><img src="./images/reg-image.png" alt=""></a>
+			<a href="#"></a>
 		</section>
+		<!-- ---------------- /Блок РЕГИСТРАЦИЯ -------------- -->
+
 
 		<!-- ------------Секция с новостями------------ -->
 		<section class="container news">
-			<ul class="news__cards-block">
-				<li class="news__cards-item">
+			<ul class="news__cards-block swiper-wrapper">
+				<li class="news__cards-item swiper-slide">
 					<img src="./images/news-image-1.png">
 					<p>01.09.2023</p>
 					<div class="news-cards-text">
@@ -362,7 +389,7 @@
 						</p>
 					</div>
 				</li>
-				<li class="news__cards-item">
+				<li class="news__cards-item swiper-slide">
 					<img src="./images/news-image-1.png">
 					<p>01.09.2023</p>
 					<div class="news-cards-text">
@@ -371,7 +398,25 @@
 						</p>
 					</div>
 				</li>
-				<li class="news__cards-item">
+				<li class="news__cards-item swiper-slide">
+					<img src="./images/news-image-1.png">
+					<p>01.09.2023</p>
+					<div class="news-cards-text">
+						<div class="news-cards-text__title">Запись в ЛБЛК открыта</div>
+						<p>С сегодняшнего дня открывается запись в лигу.Всем желающим командам необходимо бла бла бла...
+						</p>
+					</div>
+				</li>
+				<li class="news__cards-item swiper-slide">
+					<img src="./images/news-image-1.png">
+					<p>01.09.2023</p>
+					<div class="news-cards-text">
+						<div class="news-cards-text__title">Запись в ЛБЛК открыта</div>
+						<p>С сегодняшнего дня открывается запись в лигу.Всем желающим командам необходимо бла бла бла...
+						</p>
+					</div>
+				</li>
+				<li class="news__cards-item swiper-slide">
 					<img src="./images/news-image-1.png">
 					<p>01.09.2023</p>
 					<div class="news-cards-text">
@@ -381,6 +426,13 @@
 					</div>
 				</li>
 			</ul>
+			<button type="button" class="news__button news__button-prev">
+				<img src="./images/vector-left.svg" alt="Стрелочка влево">
+			</button>
+			<button type="button" class="news__button news__button-next">
+				<img src="./images/vector-right.svg" alt="Стрелочка вправо">
+			</button>
+			<div class="swiper-pagination news-pagination"></div>
 		</section>
 		<!-- ------------/Секция с новостями------------ -->
 
@@ -390,8 +442,6 @@
 		</section>
 		<!-- --------- /Контейнер Записи в ЛБЛК ---------- -->
 
-
-		<section class="container grey-block grey-block-1"></section>
 
 		<!-- ------ Контейнер с таблицей Плей-Офф и РАСПИСАНИЕМ------ -->
 		<section class="container schedule">
@@ -1507,28 +1557,28 @@
 
 		<section>
 			<ul class="container photo-galery">
-				<li class="area1">
+				<li class="area1" data-fancybox="gallery" data-src="./images/photo-galery-1.avif">
 					<image class="photo-galery-image-item" src="./images/photo-galery-1.avif"></image>
 				</li>
-				<li class="area2">
+				<li class="area2" data-fancybox="gallery" data-src="./images/photo-galery-2.avif">
 					<image class="photo-galery-image-item" src="./images/photo-galery-2.avif"></image>
 				</li>
-				<li class="area3">
+				<li class="area3" data-fancybox="gallery" data-src="./images/photo-galery-3.avif">
 					<image class="photo-galery-image-item" src="./images/photo-galery-3.avif"></image>
 				</li>
-				<li class="area4">
+				<li class="area4" data-fancybox="gallery" data-src="./images/photo-galery-4.avif">
 					<image class="photo-galery-image-item" src="./images/photo-galery-4.avif"></image>
 				</li>
-				<li class="area5">
+				<li class="area5" data-fancybox="gallery" data-src="./images/photo-galery-5.avif">
 					<image class="photo-galery-image-item" src="./images/photo-galery-5.avif"></image>
 				</li>
-				<li class="area6">
+				<li class="area6" data-fancybox="gallery" data-src="./images/photo-galery-6.avif">
 					<image class="photo-galery-image-item" src="./images/photo-galery-6.avif"></image>
 				</li>
-				<li class="area7">
+				<li class="area7" data-fancybox="gallery" data-src="./images/photo-galery-7.avif">
 					<image class="photo-galery-image-item" src="./images/photo-galery-7.avif"></image>
 				</li>
-				<li class="area8">
+				<li class="area8" data-fancybox="gallery" data-src="./images/photo-galery-8.avif">
 					<image class="photo-galery-image-item" src="./images/photo-galery-8.avif"></image>
 				</li>
 			</ul>
@@ -1563,9 +1613,9 @@
 		</div>
 	</footer>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="./scripts/script.js"></script>
+	<script src="./scripts/helpers.js"></script>
 </body>
 
 </html>
