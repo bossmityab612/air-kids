@@ -70,8 +70,6 @@ const matchesSwiper = new Swiper('.matches-swiper', {
         },
       });
       // ------ /Слайдер для новостей
-    }
-  });
   await firstInputEvent(async () => {
     if (typeof swiperLinks !== "undefined") {
       await loadLibrary(fancyboxLinks);
@@ -80,7 +78,6 @@ const matchesSwiper = new Swiper('.matches-swiper', {
       }); 
     }
   });
-});
 
 // -------- Бургер
 
