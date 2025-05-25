@@ -1,67 +1,41 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const swiperLinks = {
-    script: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
-    style: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  }
-  const fancyboxLinks = {
-    script: "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js",
-    style: "https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-  }
-  await firstInputEvent(async () => {
-    if (typeof swiperLinks !== "undefined") {
-      await loadLibrary(swiperLinks);
+// ----- Слайдер для Интро
+const introSwiper = new Swiper('.intro', {
+  // Настройки слайдера
+  loop: true,
+  pagination: {
+    el: '.intro-pagination',
+  },
+  navigation: {
+    nextEl: '.intro__button-right',
+    prevEl: '.intro__button-left'
+  },
+});
+// ----- /Слайдер для Интро
 
-      // ----- Слайдер для Интро
-      const introSwiper = new Swiper('.intro', {
-        // Настройки слайдера
-        loop: true,
-        pagination: {
-          el: '.intro-pagination',
-        },
-        speed: 800,
-        navigation: {
-          nextEl: '.intro__button-right',
-          prevEl: '.intro__button-left'
-        },
-        autoplay: {
-          delay: 3000,
-        },
-        pagination: {
-          el: '.swiper-pagination',     // Селектор элемента пагинации
-          clickable: true,             // Включить кликабельную пагинацию
-          type: 'bullets',             // Тип пагинации ('bullets' или 'fraction')
+// ------ Слайдер для расписания матчей
 
-          // Для дробной пагинации
-          renderFraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + '"></span>' + ' / ' + '<span class="' + totalClass + '"></span>';
-          }
-        },
-      });
-      // ----- /Слайдер для Интро
+const matchesSwiper = new Swiper('.matches-swiper', {
+  // Настройки слайдера
+  slidesPerView: 1,
+  spaceBetween: 23,
+  loop: true,
+  navigation: {
+    nextEl: '.matches__button-next',
+    prevEl: '.matches__button-prev'
+  },
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 26
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 32
+    },
+  },
+});
 
-      // ------ Слайдер для расписания матчей
-      const matchesSwiper = new Swiper('.matches-swiper', {
-        // Настройки слайдера
-        slidesPerView: 1,
-        spaceBetween: 23,
-        loop: true,
-        // pagination: true,
-        navigation: {
-          nextEl: '.matches__button-next',
-          prevEl: '.matches__button-prev'
-        },
-        breakpoints: {
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 26
-          },
-          992: {
-            slidesPerView: 4,
-            spaceBetween: 32
-          },
-        },
-      });
-      // ------ /Слайдер для расписания матчей
+// ------ /Слайдер для расписания матчей
 
       // ------ Слайдер для новостей
       const newsSwiper = new Swiper('.news', {

@@ -292,6 +292,7 @@ body {
   width: 10px;
   height: 10px;
   opacity: 1;
+  background-color: transparent;
 }
 
 /* ---- Блок МАТЧИ расписание ----- */
@@ -955,16 +956,19 @@ body {
   object-fit: cover;
 }
 
-.photo-galery li{
-  cursor: pointer;
-  overflow: hidden;
+
+
+/* ----- Блок СЕРЫЙ БЛОК-2 ----- */
+
+.grey-block-2 {
+  margin: 40px auto 0;
+  width: 100%;
+  min-height: 100px;
+  min-height: 424px;
+  background-color: #909090;
 }
-.photo-galery li img{
-  transition: transform .2s ease;
-}
-.photo-galery li:hover img{
-  transform: scale(1.2);
-}
+
+/*-----------------------------*/
 
 footer {
   margin: 25px 0 0 0;
@@ -1035,6 +1039,20 @@ footer {
 }
 
 /* ----- Медиа-запросы ---- */
+
+@media screen and (max-width: 1140px) {
+  .news__cards-block {
+    gap: 12px;
+    padding: 0 12px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .grey-block-2 {
+    min-height: 225px;
+  }
+}
 
 @media screen and (max-width: 956px) {
   .header__navigation-list {
@@ -1218,6 +1236,10 @@ footer {
 
   .news-section__cards-block-matrix.news__cards-block {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .grey-block-1 {
+    margin: 0 auto 40px;
   }
 
   .schedule__play-off-block {
