@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         spaceBetween: 23,
         loop: true,
         // pagination: true,
-        navigation: { 
+        navigation: {
           nextEl: '.news__button-next',
           prevEl: '.news__button-prev'
         },
