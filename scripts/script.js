@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (typeof swiperLinks !== "undefined") {
       await loadLibrary(swiperLinks);
 
-      // ----- Слайдер для Интро
+      // // ----- Слайдер для Интро
       const introSwiper = new Swiper('.intro', {
         // Настройки слайдера
         loop: true,
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           }
         },
       });
-      // ----- /Слайдер для Интро
+      // // ----- /Слайдер для Интро
 
       // ------ Слайдер для расписания матчей
       const matchesSwiper = new Swiper('.matches-swiper', {
@@ -107,6 +107,31 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 });
+
+// ------ Слайдер для расписания матчей
+const matchesSwiper = new Swiper('.matches-swiper', {
+  // Настройки слайдера
+  slidesPerView: 1,
+  spaceBetween: 23,
+  loop: true,
+  // pagination: true,
+  navigation: {
+    nextEl: '.matches__button-next',
+    prevEl: '.matches__button-prev'
+  },
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 26
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 32
+    },
+  },
+});
+// ------ //Слайдер для расписания матчей
+
 
 // -------- Бургер
 

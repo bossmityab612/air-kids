@@ -7,13 +7,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Air Kids - Команды</title>
    <link rel="icon" href="./images/logo-icon.ico">
-   <link rel="stylesheet" href="./pages/index.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./pages/index.css">
 
 </head>
 
 <body>
-    <header class="header">
+  <header class="header">
 		<div class="header__block">
 			<a class="header__logo-link" href="./index.html">
 				<img src="./images/Logo.svg" alt="">
@@ -23,9 +23,33 @@
 				<li class="header__navigation-list-item"><a href="./news.html">Новости</a></li>
 				<li class="header__navigation-list-item"><a href="./calendar.html">Календарь</a></li>
 				<li class="header__navigation-list-item"><a href="./teams.html">Команды</a></li>
-				<li class="header__navigation-list-item"><a href="./players.html">Игроки</a></li>
-				<li class="header__navigation-list-item"><a href="./statistics.html">Статистика</a></li>
-				<li class="header__navigation-list-item"><a href="#">Медиа</a></li>
+
+				<li class="header__navigation-list-item dropdown">
+					<a href="./players.html" class="dropdown-toggle">Игроки</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Игроки</a></li>
+						<li><a href="#">MVP</a></li>
+						<li><a href="#">Команда MVP</a></li>
+					</ul>
+				</li>
+
+				<li class="header__navigation-list-item dropdown">
+					<a href="./statistics.html" class="dropdown-toggle">Статистика</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Статистика</a></li>
+						<li><a href="#">Статистика турнира</a></li>
+						<li><a href="#">Турнирная таблица</a></li>
+					</ul>
+				</li>
+
+				<li class="header__navigation-list-item dropdown">
+					<a href="#" class="dropdown-toggle">Медиа</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Медиа</a></li>
+						<li><a href="https://example.com/photos" target="_blank">Фото</a></li>
+						<li><a href="https://example.com/videos" target="_blank">Видео</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 		<div class="burger">
@@ -1357,6 +1381,7 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="./scripts/script.js"></script>
+	<script src="./scripts/helpers.js"></script>
 
 </body>
 
