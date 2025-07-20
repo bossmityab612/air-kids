@@ -427,25 +427,34 @@ body {
 
 /* ----- Блок НОВОСТИ ----- */
 
+.container.news {
+  padding: 0;
+}
+
+.matches-swiper {
+  overflow: visible; /* Важно для корректного отображения */
+}
+
 .news {
-  margin: 10px auto 70px;
+  border: 1px solid #000;
+  margin: clamp(5px, 2vw, 10px) auto clamp(30px, 7vw, 70px);
   overflow: hidden;
 }
 
 .news__cards-block {
+  border: 1px solid red;
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-around;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+  gap: 24px;
   list-style: none;
   margin-bottom: 24px;
-  gap: 24px;
 }
 
 .news__cards-item {
   border-radius: 30px;
   width: 100%;
-  min-height: 414px;
+  min-height: clamp(300px, 50vw, 414px);
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
@@ -457,6 +466,8 @@ body {
 
 .news__cards-item img {
   border-radius: 30px 30px 0 0;
+  object-fit: cover;
+  height: auto;
   width: 100%;
 }
 
@@ -466,13 +477,77 @@ body {
 }
 
 .news-cards-text {
+  /* padding: 6px; */
+  padding: clamp(8px, 2vw, 12px);
+  min-height: 140px;  
+}
+
+.news-cards-text__title {
+  font-weight: bold;
+  font-size: 20px;
+  font-size: clamp(16px, 4vw, 22px);
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+
+.news-cards-text p:nth-child(2) {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: left;
+}
+
+/* 
+.news {
+  margin: 10px auto 70px;
+  margin: clamp(5px, 2vw, 10px) auto clamp(30px, 7vw, 70px);
+  overflow: hidden;
+}
+
+.news__cards-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.news__cards-item {
+  border-radius: 30px;
+  width: 100%;
+  min-height: clamp(300px, 50vw, 414px);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  
+}
+
+.news__cards-item:hover {
+  background-color: #6D1AD7;
+  color: #fff;
+}
+
+.news__cards-item img {
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+.news__cards-item p {
+  text-align: right;
+  margin: 7px 6px 0 0;
+}
+
+.news-cards-text {
   padding: 6px;
+  padding: clamp(8px, 2vw, 12px);
   min-height: 140px;
 }
 
 .news-cards-text__title {
   font-weight: bold;
   font-size: 20px;
+  font-size: clamp(16px, 4vw, 22px);
   line-height: 24px;
   margin-bottom: 12px;
 }
@@ -492,7 +567,7 @@ body {
 .news .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active{
   background-color: #000;
   border-color: #000;
-}
+} */
 
 /*----------- Контейнер Записи в ЛБЛК ---------- */
 .table img {
@@ -1242,6 +1317,10 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
+  .news-item {
+    padding: clamp(8px, 2vw, 15px);
+  }
+
   .grey-block-1 {
     margin: 0 auto 40px;
   }
@@ -1290,6 +1369,26 @@ footer {
 
   .footer__links-block-item a {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .news-item {
+    flex-direction: column;
+  }
+  .news-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .news__cards-block {
+    grid-template-columns: 1fr;
+  }
+  
+  .news__cards-item {
+    min-height: auto;
   }
 }
 

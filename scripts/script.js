@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       // ------ Слайдер для новостей
       const newsSwiper = new Swiper('.news', {
         // Настройки слайдера
-        slidesPerView: 1,
-        spaceBetween: 23,
+        slidesPerView: auto,
+        spaceBetween: 20,
         loop: true,
         // pagination: true,
         navigation: {
@@ -85,14 +85,15 @@ document.addEventListener("DOMContentLoaded", async () => {
           }
         },
         breakpoints: {
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 0
-          },
-          992: {
+          320: {
             slidesPerView: 3,
-            spaceBetween: 32
           },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+          }
         },
       });
       // ------ /Слайдер для новостей
